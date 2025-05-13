@@ -1,16 +1,57 @@
 //global/root
 :root {
     --fontFamily: 'Helvetica', sans-serif;
+    --bgColor: #f2f2f2;
+    --primaryTextColor: #333333;
+    --titleFontSize: 3rem;
+    --borderRadius: 8px;
 }
 
+a {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primaryTextColor);
+    text-decoration: none;
+}
 //home specific
+.home-title {
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+}
 //components
 
+
 //case cards
+.case-card {
+    display: flex;
+}
+//arrow hover - transition in CSS
+.home-case-title {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 16px;
+}
+
+.arrow {
+	font-size: 28px;
+	font-family: 'Helvetica';
+	font-weight: 400;
+}
+
+.home-case-title:hover .arrow {
+	transition: transform 300ms;
+	transform: translateX(24px);
+	transition-delay: 150ms;
+}
 
 //header
 
 //footer
 
-
+@media screen and (max-width: 768px) {
+    
+}
 

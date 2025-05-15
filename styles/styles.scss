@@ -3,8 +3,32 @@
     --fontFamily: 'Helvetica', sans-serif;
     --bgColor: #f2f2f2;
     --primaryTextColor: #333333;
-    --titleFontSize: 3rem;
+    --blackColor: #333333;
+    --stroke: 1px solid #333333;
+    --fontSizeXL: 3.5rem; //h1, 56px
+    --fontSizeL: 1.75rem; //28px, subheaders
+    --fontSizeM: 1.25rem; //20px descriptions
+    --fontSizeS: 1rem; //16px contents, body, nav
+    --fontSizeXS:.75rem; //12px captions
     --borderRadius: 8px;
+}
+
+@mixin homeTitle {
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-size: var(--fontSizeXL);
+}
+
+@mixin subhead {
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-size: var(--fontSizeL);
+}
+
+@mixin description {
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-size: var(--fontSizeM);
 }
 
 a {

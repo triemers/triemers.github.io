@@ -74,7 +74,8 @@ h2 { /* check that this includes the case study headers? */
 /* home title - might be able to get rid of this but keeping in case of conflict between case studies and others */
 .home-title {
     grid-column: 1 / span 2;
-    grid-row-start: 2; /* need span? */
+    grid-row-start: 2;
+    margin: 0;
     font-family: var(--fontFamily);
     color: var(--primaryTextColor);
     font-size: var(--fontSizeXL);
@@ -92,9 +93,10 @@ h2 { /* check that this includes the case study headers? */
 .case-card {
     display: flex;
     flex-direction: column;
+    margin: 0px 20px;
 }
 
-.card-img {
+.card-img { /* FIX THIS LCI Not the right aspect ratio*/
     width: 100%;
     height: auto;
 }
@@ -120,7 +122,7 @@ h2 { /* check that this includes the case study headers? */
 
 /* resume section */
 .resume-container { /* same, do I need except for media queries? */
-    grid-row-start: 9;
+    grid-row-start: 10;
     grid-column: 1 / span 3;
     display: flex;
     flex-direction: row;
@@ -128,6 +130,8 @@ h2 { /* check that this includes the case study headers? */
 
 .resume-item {
     border-top: var(--border);
+    margin: 0px 20px;
+    width: 1fr;
 }
 
 /* header */

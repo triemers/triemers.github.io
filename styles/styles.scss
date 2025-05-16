@@ -52,22 +52,29 @@ h2 { //check that this includes the case study headers?
 
 //components
 
+//layout
+
+.home-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 100px);
+    grid-gap: 20px;
+    margin: 20px 60px;
+}
 
 //home title - might be able to get rid of this but keeping in case of conflict between case studies and others 
 .home-title {
+    grid-column: 1 / span 2;
+    grid-row-start: 2; //need span?
     font-family: $fontFamily;
     color: $primaryTextColor;
     font-size: $fontSizeXL;
 }
 
-//layout
-
-
 
 //case cards
-.card-container {
-    display: flex;
-}
+//do I need a container for the card set? maybe only for mobile queries
+
 .case-card {
     display: flex;
 }

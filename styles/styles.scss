@@ -1,56 +1,80 @@
 //global/root
-:root {
-    --fontFamily: 'Helvetica', sans-serif;
-    --bgColor: #f2f2f2;
-    --primaryTextColor: #333333;
-    --blackColor: #333333;
-    --stroke: 1px solid #333333;
-    --fontSizeXL: 3.5rem; //h1, 56px
-    --fontSizeL: 1.75rem; //28px, subheaders
-    --fontSizeM: 1.25rem; //20px descriptions
-    --fontSizeS: 1rem; //16px contents, body, nav
-    --fontSizeXS:.75rem; //12px captions
-    --borderRadius: 8px;
+body {
+    $fontFamily: 'Helvetica', sans-serif;
+    $bgColor: #f2f2f2;
+    $primaryTextColor: #333333;
+    $black: #333333;
+    $border: 1px solid #333333;
+    $fontSizeXL: 3.5rem; //h1, 56px
+    $fontSizeL: 1.75rem; //28px, subheaders
+    $fontSizeM: 1.25rem; //20px descriptions
+    $fontSizeS: 1rem; //16px contents, body, nav
+    $fontSizeXS:.75rem; //12px captions
+    $borderRadius: 8px;
 }
 
-@mixin homeTitle {
-    font-family: var(--fontFamily);
-    color: var(--primaryTextColor);
-    font-size: var(--fontSizeXL);
-}
-
+//typography
 @mixin subhead {
-    font-family: var(--fontFamily);
-    color: var(--primaryTextColor);
-    font-size: var(--fontSizeL);
+    font-family: $fontFamily;
+    color: $primaryTextColor;
+    font-size: $fontSizeL;
 }
 
 @mixin description {
-    font-family: var(--fontFamily);
-    color: var(--primaryTextColor);
-    font-size: var(--fontSizeM);
+    font-family: $fontFamily;
+    color: $primaryTextColor;
+    font-size: $fontSizeM;
 }
 
-a {
-    color: var(--primaryTextColor);
+a, p, h1, h2 {
+    font-family: $fontFamily;
+    color: $primaryTextColor;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--primaryTextColor);
-    text-decoration: none;
+    text-decoration: underline;
 }
-//home specific
-.home-title {
-    font-family: var(--fontFamily);
-    color: var(--primaryTextColor);
+
+p {
+    font-size: $fontSizeS;
 }
+
+h1 {
+    font-family: $fontFamily;
+    color: $primaryTextColor;
+    font-size: $fontSizeXL;
+}
+
+h2 { //check that this includes the case study headers?
+    @include subhead;
+}
+
 //components
 
 
+//home title - might be able to get rid of this but keeping in case of conflict between case studies and others 
+.home-title {
+    font-family: $fontFamily;
+    color: $primaryTextColor;
+    font-size: $fontSizeXL;
+}
+
+//layout
+
+
+
 //case cards
+.card-container {
+    display: flex;
+}
 .case-card {
     display: flex;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
 }
 //arrow hover - transition in CSS
 .home-case-title {
@@ -61,7 +85,7 @@ a:hover {
 
 .arrow {
 	font-size: 28px;
-	font-family: 'Helvetica';
+	font-family: $fontFamily;
 	font-weight: 400;
 }
 
@@ -75,6 +99,7 @@ a:hover {
 
 //footer
 
+//media queries
 @media screen and (max-width: 768px) {
     
 }

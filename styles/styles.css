@@ -121,12 +121,6 @@ h2 { /* check that this includes the case study headers? */
 }
 
 /* resume section */
-.resume-container { /* same, do I need except for media queries? */
-    grid-row-start: 10;
-    grid-column: 1 / span 3;
-    display: flex;
-    flex-direction: row;
-}
 
 .resume-item {
     border-top: var(--border);
@@ -134,6 +128,20 @@ h2 { /* check that this includes the case study headers? */
     width: 1fr;
 }
 
+#resume-1 {
+    grid-row-start: 10;
+    grid-column: 1 / span 1;
+}
+
+#resume-2 {
+    grid-row-start: 10;
+    grid-column: 2 / span 1;
+}
+
+#resume-3 {
+    grid-row-start: 10;
+    grid-column: 3 / span 1;
+}
 /* header */
 
 /* footer */

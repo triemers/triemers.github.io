@@ -93,7 +93,6 @@ h2 { /* check that this includes the case study headers? */
 .case-card {
     display: flex;
     flex-direction: column;
-    margin: 0px 20px;
 }
 
 .card-img { /* FIX THIS LCI Not the right aspect ratio*/
@@ -124,8 +123,6 @@ h2 { /* check that this includes the case study headers? */
 
 .resume-item {
     border-top: var(--border);
-    margin: 0px 20px;
-    width: 1fr;
 }
 
 #resume-1 {

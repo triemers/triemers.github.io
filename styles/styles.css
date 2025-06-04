@@ -83,8 +83,6 @@ h2 { /* check that this includes the case study headers? */
 
 /* case cards */
 
-
-
 #case-1 {
     grid-row-start: 5;
     grid-column-start: 1;
@@ -154,5 +152,6 @@ h2 { /* check that this includes the case study headers? */
 
 /* media queries */
 @media screen and (max-width: 768px) {
-    
+  
+
 }

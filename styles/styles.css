@@ -5,7 +5,7 @@
     --primaryTextColor: #333333;
     --black: #333333;
     --border: 1px solid #333333;
-    --fontSizeXL: 3.5rem; /* h1, 56px */
+    --fontSizeXL: 2.6rem; /* h1,  */
     --fontSizeL: 1.75rem; /* 28px, subheaders */
     --fontSizeM: 1.25rem; /* 20px descriptions */
     --fontSizeS: 1rem; /* 16px contents, body, nav */
@@ -84,17 +84,17 @@ h2 { /* check that this includes the case study headers? */
 /* case cards */
 
 #case-1 {
-    grid-row-start: 5;
+    grid-row-start: 4;
     grid-column-start: 1;
 }
 
 #case-2 {
-    grid-row-start: 5;
+    grid-row-start: 4;
     grid-column-start: 2;
 }
 
 #case-3 {
-    grid-row-start: 5;
+    grid-row-start: 4;
     grid-column-start: 3;
 }
 .case-card {
@@ -170,5 +170,14 @@ h2 { /* check that this includes the case study headers? */
 /* media queries */
 @media screen and (max-width: 768px) {
   
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 60px;
+    }
 
+    .home-title {
+        margin: 40px 0px;
+        font-size: var(--fontSizeL);
+    }
 }

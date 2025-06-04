@@ -132,6 +132,23 @@ h2 { /* check that this includes the case study headers? */
     border-top: var(--border);
 }
 
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.resume-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.resume-link:hover .arrow {
+    cursor: pointer;
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}
+
 #resume-1 {
     grid-row-start: 10;
     grid-column: 1 / span 1;

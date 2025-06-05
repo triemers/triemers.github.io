@@ -64,3 +64,120 @@ h2 { /* check that this includes the case study headers? */
 
 
 
+/*header/footer*/
+.header-container, .footer-container {
+    max-width: 100%;
+    margin: 0 60px;
+}
+
+ header, footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+.logo {
+    font-size: var(--fontSizeM);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+}
+
+ .nav-menu, .footer-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+.nav-link, .footer-link {
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--fontSizeS);
+            transition: color 0.3s ease;
+        }
+
+.nav-link:hover {
+    color: #666;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* footer */
+
+ footer {
+            border-top: 1px solid var(--black);
+            width: 100%;     
+        }
+
+.footer-email {
+            margin-left: 20px;
+            font-size: 16px;
+            color: var(--black);
+        }
+
+.footer-left {
+            display: flex;
+            align-items: center;
+        }
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+
+    .header-container, .footer-container {
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    .header-container {
+        margin: 0px;
+        border-bottom: var(--border);
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--bgColor);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 101;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--black);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+.hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}

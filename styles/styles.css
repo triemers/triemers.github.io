@@ -17,6 +17,9 @@ body {
     font-family: var(--fontFamily);
     background-color: var(--bgColor);
     color: var(--primaryTextColor);
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*GPT CODE*/
 }
 
 /* typography */
@@ -66,9 +69,10 @@ h2 { /* check that this includes the case study headers? */
 .home-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(10, 10%); /*FIX THIS not the most responsive at bigger and smaller screen sizes*/
-    grid-gap: 20px;
-    margin: 20px 60px;
+    grid-template-rows: auto;
+    grid-gap: 60px 20px;
+    margin: 20px 60px; 
+    flex: 1; /*GPT CODE*/
 }
 
 /* home title - might be able to get rid of this but keeping in case of conflict between case studies and others */
@@ -130,6 +134,8 @@ h2 { /* check that this includes the case study headers? */
 
 .resume-item {
     border-top: var(--border);
+    grid-row-start: 5;
+    padding-bottom: 60px;
 }
 
 .resume-link {
@@ -150,32 +156,28 @@ h2 { /* check that this includes the case study headers? */
 }
 
 #resume-1 {
-    grid-row-start: 9;
     grid-column: 1 / span 1;
 }
 
 #resume-2 {
-    grid-row-start: 9;
     grid-column: 2 / span 1;
 }
 
 #resume-3 {
-    grid-row-start: 9;
     grid-column: 3 / span 1;
 }
 /* header */
-.header-container {
+.header-container, .footer-container {
     max-width: 100%;
     margin: 0 60px;
-    border-bottom: var(--border);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0px;
-}
+ header, footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
 
 .logo {
     font-size: var(--fontSizeM);
@@ -184,16 +186,17 @@ header {
     color: var(--black);
 }
 
-.nav-menu {
-    display: flex;
-    gap: 40px;
-}
-.nav-link {
-    text-decoration: none;
-    color: var(--black);
-    font-size: var(--fontSizeS);
-    transition: color 0.3s ease;
-}
+ .nav-menu, .footer-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+.nav-link, .footer-link {
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--fontSizeS);
+            transition: color 0.3s ease;
+        }
 
 .nav-link:hover {
     color: #555;
@@ -204,9 +207,40 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* footer */
 
-.nav-menu {
+ footer {
+            border-top: 1px solid var(--black);
+            width: 100%;     
+        }
+
+.footer-email {
+            margin-left: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+.footer-left {
+            display: flex;
+            align-items: center;
+        }
+/* media queries */
+@media screen and (max-width: 768px) {
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        width: 100%;
+        grid-gap: 20px 20px;
+    }
+
+    .home-title {
+        margin: 40px 0px;
+        font-size: var(--fontSizeL);
+    }
+
+/*header hamburger*/
+    .nav-menu {
         position: fixed;
         top: 0;
         right: -100%;
@@ -221,7 +255,7 @@ header {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 100;
     }
-.nav-menu.active {
+    .nav-menu.active {
         right: 0;
     }
 
@@ -254,21 +288,5 @@ header {
         max-width: 100%;
         margin: 0 20px;
         border-bottom: var(--border);
-    }
-}
-/* footer */
-
-/* media queries */
-@media screen and (max-width: 768px) {
-  
-    .home-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-    }
-
-    .home-title {
-        margin-bottom: 40px;
-        font-size: var(--fontSizeL);
     }
 }

@@ -1,0 +1,226 @@
+/* layout */
+
+.home-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 60px 20px;
+    margin: 20px 60px; 
+    flex: 1; /*GPT CODE*/
+}
+
+/* home title - might be able to get rid of this but keeping in case of conflict between case studies and others */
+.home-title {
+    grid-column: 1 / span 2;
+    grid-row-start: 2;
+    margin: 0;
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-size: var(--fontSizeXL);
+}
+
+/* case cards */
+
+#case-1 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+}
+
+#case-2 {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+
+#case-3 {
+    grid-row-start: 4;
+    grid-column-start: 3;
+}
+.case-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img { /* FIX THIS LCI Not the right aspect ratio*/
+    width: 100%;
+    height: auto;
+}
+
+/* arrow hover - transition in CSS */
+.home-case-title {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.arrow {
+    font-size: 28px;
+    font-family: var(--fontFamily);
+    font-weight: 400;
+}
+
+.home-case-title:hover .arrow {
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}
+
+/* resume section */
+
+.resume-item {
+    border-top: var(--border);
+    grid-row-start: 5;
+    padding-bottom: 60px;
+}
+
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.resume-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.resume-link:hover .arrow {
+    cursor: pointer;
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}
+
+#resume-1 {
+    grid-column: 1 / span 1;
+}
+
+#resume-2 {
+    grid-column: 2 / span 1;
+}
+
+#resume-3 {
+    grid-column: 3 / span 1;
+}
+/* header */
+.header-container, .footer-container {
+    max-width: 100%;
+    margin: 0 60px;
+}
+
+ header, footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+.logo {
+    font-size: var(--fontSizeM);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black);
+}
+
+ .nav-menu, .footer-nav {
+            display: flex;
+            gap: 40px;
+        }
+
+.nav-link, .footer-link {
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--fontSizeS);
+            transition: color 0.3s ease;
+        }
+
+.nav-link:hover {
+    color: #555;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* footer */
+
+ footer {
+            border-top: 1px solid var(--black);
+            width: 100%;     
+        }
+
+.footer-email {
+            margin-left: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+.footer-left {
+            display: flex;
+            align-items: center;
+        }
+/* media queries */
+@media screen and (max-width: 768px) {
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        width: 100%;
+        grid-gap: 20px 20px;
+    }
+
+    .home-title {
+        margin: 40px 0px;
+        font-size: var(--fontSizeL);
+    }
+
+/*header hamburger*/
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: var(--bgColor);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 101;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--black);
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+.hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .header-container {
+        max-width: 100%;
+        margin: 0 20px;
+        border-bottom: var(--border);
+    }
+}

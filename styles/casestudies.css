@@ -1,5 +1,7 @@
 /*text */
-
+.case-title {
+    text-transform: lowercase;
+}
 
 /*components*/
 .case-study-wrapper {

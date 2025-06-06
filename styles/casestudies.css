@@ -1,6 +1,5 @@
 /*text */
 
-/*images*/
 
 /*components*/
 .case-study-wrapper {
@@ -10,15 +9,23 @@
 }
 
 .lead-object {
-    grid-column-start: 1 / span 6;
-    grid-row-start: 1;
-}
-
-.contents {
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 20px;
 
 }
 
+.lead-text {
+    grid-column: 1 / span 1;
+}
+
+.lead-img {
+    grid-column: 2 / span 1.5; /*not entirely sure this will work lol*/
+}
+
+.contents-item {
+    grid-column: 3 / span 2;
+}
 .contents-link {
     display: inline-flex;
     align-items: center;
@@ -36,17 +43,23 @@
     transition-delay: 150ms;
 }
 
+.contents-link > p {
+    font-size: var(--fontSizeM);
+    text-transform: lowercase;
+}
 .case-section {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 0px 20px;
     border-top: var(--border);
 }
 
 .section-title {
     grid-column: 1 / span 2;
-
+    text-transform: lowercase;
+    margin-top: 16px;
+    margin-bottom: 0px;
 }
 
 .case-body {
@@ -54,6 +67,11 @@
 }
 
 
+/*images*/
+
+.inline-img {
+    grid-column: 3 / span 3;   
+}
 /*responsiveness*/
 
 

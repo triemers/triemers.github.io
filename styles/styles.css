@@ -62,7 +62,9 @@ h2 { /* check that this includes the case study headers? */
     font-size: var(--fontSizeL);
 }
 
-
+h3 {
+    line-height: 1.4;
+}
 
 /*header/footer*/
 .header-container, .footer-container {

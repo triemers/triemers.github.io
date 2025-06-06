@@ -25,13 +25,22 @@
     grid-column: 2 / span 1.5; /*not entirely sure this will work lol*/
 }
 
-.contents-item {
-    grid-column: 3 / span 2;
+.contents-items-wrapper {
+        grid-column: 3 / span 2;
+        margin: 24px 0px;
 }
+
+.contents-item {
+    margin: 4px 0; /* Reduces vertical spacing around each item */
+    display: block; /* Fixes potential grid/flex weirdness */
+}
+
 .contents-link {
     display: inline-flex;
     align-items: center;
     column-gap: 16px;
+    padding: 4px 0; /* Reduces internal padding */
+    height: 24px; /* Fixed height */
 }
 
 .contents-link:hover {
@@ -48,6 +57,7 @@
 .contents-link > p {
     font-size: var(--fontSizeM);
     text-transform: lowercase;
+        margin: 0; /* Removes default paragraph margins */
 }
 .case-section {
     display: grid;
@@ -62,6 +72,8 @@
     text-transform: lowercase;
     margin-top: 16px;
     margin-bottom: 0px;
+        line-height: 1.4; /* Maintains title height */
+    padding: 8px 0; /* Gives title more breathing room */
 }
 
 .case-body {

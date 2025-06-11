@@ -14,6 +14,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -21,10 +22,40 @@
     grid-column: 1;
 }
 
-.lead-img {
-    grid-column: 2 / span 1.5;
+.lead-img { /*may want to have long-type images here? consider flex?*/
+    grid-column: 2 / span 2;
+    max-height: 400px;
+}
+/*image zoom on click*/
+.click-zoom input[type=checkbox] {
+  display: none
 }
 
+.click-zoom img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(2);
+  cursor: zoom-out
+}
+/*compare img*/
+.compare-container {
+    grid-column: 3 / span 4;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.image-before {
+    height: 260px;
+    width: auto;
+}
+
+.image-after {
+        height: 260px;
+    width: auto;
+}
 /*contents*/
 .case-section {
     display: grid;

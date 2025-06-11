@@ -20,3 +20,4 @@ const hamburger = document.querySelector('.hamburger');
 //scroll interactions
 
 //image zoom/lightbox
+

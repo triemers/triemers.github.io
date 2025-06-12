@@ -10,6 +10,7 @@
     margin: 60px;
 }
 
+/*lead*/
 .lead-object {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -27,11 +28,20 @@
     max-height: 400px;
 }
 
-.inline-img {
-    height:auto;
-    max-width: 900px;
+/*case-section*/
+.case-section {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 20px;
+    margin: 20px 0px;
+    border-top: var(--border);
 }
 
+.case-contents {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
 /*image zoom on click*/
 .click-zoom input[type=checkbox] {
   display: none
@@ -48,8 +58,8 @@
 }
 /*compare img*/
 .compare-container {
-    grid-column: 3 / span 4;
     display: inline-flex;
+    flex-direction: row;
     gap: 20px;
 }
 
@@ -63,30 +73,20 @@
     height: auto;
 }
 /*contents*/
-.case-section {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    gap: 0px 20px;
-    border-top: var(--border);
-}
-
-.case-section:last-child {
-    margin-bottom: 20px;
-}
 
 .section-title {
-    grid-column: 1 / span 2;
     text-transform: lowercase;
     margin-top: 16px;
     margin-bottom: 0px;
     line-height: 1.4;
     padding: 8px 0;
+    width: 30%;
 }
 
 .contents-items-wrapper {
-        grid-column: 3 / span 2;
-        margin: 24px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
 }
 
 .contents-item {
@@ -99,7 +99,7 @@
     align-items: center;
     gap: 16px;
     padding: 4px 0;
-    height: 24px; 
+    min-height: 24px; 
 }
 
 .contents-link:hover {
@@ -120,16 +120,55 @@
 }
 
 .case-body {
-    grid-column: 3 / span 3;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /*images*/
 
 .inline-img {
-    grid-column: 3 / span 3;   
+     max-width: 700px;
 }
 /*responsiveness*/
 
+@media screen and (max-width: 768px) {
 
+.lead-object {
+    display: flex;
+    flex-direction: column;
+}
+
+    .case-study-wrapper {
+        margin: 40px;
+        width: 100%;
+    }
+
+    .case-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-title{
+        width: 100%;
+    }
+
+    .case-contents {
+        width: 100%;
+    }
+
+    .inline-img {
+        width: 100%;
+    }
+
+    .compare-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .image-before, .image-after {
+        max-width: 100%;
+    }
+}
 

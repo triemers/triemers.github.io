@@ -26,6 +26,12 @@
     grid-column: 2 / span 2;
     max-height: 400px;
 }
+
+.inline-img {
+    height:auto;
+    max-width: 900px;
+}
+
 /*image zoom on click*/
 .click-zoom input[type=checkbox] {
   display: none
@@ -48,13 +54,13 @@
 }
 
 .image-before {
-    height: 260px;
-    width: auto;
+    max-width: 500px;
+    height: auto;
 }
 
 .image-after {
-        height: 260px;
-    width: auto;
+    max-width: 500px;
+    height: auto;
 }
 /*contents*/
 .case-section {
@@ -63,6 +69,10 @@
     grid-template-rows: auto;
     gap: 0px 20px;
     border-top: var(--border);
+}
+
+.case-section:last-child {
+    margin-bottom: 20px;
 }
 
 .section-title {

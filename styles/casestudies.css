@@ -130,6 +130,75 @@
 .inline-img {
      max-width: 700px;
 }
+
+/*image slider*/
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 400px; /* Add fixed height */
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.before {
+    z-index: 2;
+    clip-path: inset(0 0 0 50%);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px; /* Wider handle */
+    height: 100%;
+    background-color: transparent;
+    cursor: ew-resize;
+    z-index: 3;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Handle grip design */
+.slider-handle::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 50px;
+    background: rgb(18, 149, 205);
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/* Optional: Add arrows to the handle */
+.slider-handle::before {
+    content: "↔";
+    position: absolute;
+    color: rgb(18, 149, 205);
+    font-size: 40px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
 /*responsiveness*/
 
 @media screen and (max-width: 768px) {

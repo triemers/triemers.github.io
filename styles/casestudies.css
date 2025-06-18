@@ -144,6 +144,9 @@
     height: 400px; /* Add fixed height */
 }
 
+.tall-slider {
+    height: 980px;
+}
 .slider {
     position: relative;
     width: 100%;

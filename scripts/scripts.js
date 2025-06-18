@@ -51,4 +51,8 @@ document.addEventListener('touchmove', (e) => {
     beforeImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
 });
 
-//click to zoom/lightbox
+
+
+
+//IMAGE MODALS
+

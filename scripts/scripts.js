@@ -54,7 +54,7 @@ document.addEventListener('touchmove', (e) => {
 
 
 
-//IMAGE MODALS
+//IMAGE MODALS !! WHY DOESN'T THIS WORK !!
  var modal= document.getElementsByClassName('myModal');
 
  var img = document.getElementsByClassName('myImg');

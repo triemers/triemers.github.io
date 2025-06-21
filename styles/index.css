@@ -43,6 +43,13 @@
 .card-img { /* FIX THIS LCI Not the right aspect ratio*/
     width: 100%;
     height: auto;
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.card-img:hover {
+    opacity: .5;
 }
 
 /* arrow hover - transition in CSS */

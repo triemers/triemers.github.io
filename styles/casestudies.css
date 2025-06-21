@@ -58,7 +58,7 @@
 }
   */
 
-  
+
 /*compare img
 .compare-container {
     display: inline-flex;
@@ -80,7 +80,12 @@
 /*images*/
 
 .inline-img {
-    max-width: 700px;
+    width: 700px;
+    height: auto;
+}
+
+p.caption-below {
+    font-size: var(--fontSizeXS);
 }
 
 /* image modal */
@@ -176,6 +181,7 @@
     display: flex;
     flex-direction: column;
     width: 700px;
+    margin-top: 16px;
 }
 
 .contents-item {

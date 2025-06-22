@@ -54,20 +54,37 @@ document.addEventListener('touchmove', (e) => {
 
 
 
-//IMAGE MODALS !! WHY DOESN'T THIS WORK !!
- var modal= document.getElementsByClassName('myModal');
+//IMAGE MODALS -- it works now 
+ // Get all elements needed
+var images = document.querySelectorAll('.myImg');
+var modals = document.querySelectorAll('.myModal');
+var closeButtons = document.querySelectorAll('.close');
 
- var img = document.getElementsByClassName('myImg');
- var modalImg = document.getElementById('img01');
- var captionText = document.getElementsByClassName('modal-caption');
-
- img.onclick = function () {
+// Add click event to each image
+images.forEach(function(img, index) {
+  img.onclick = function() {
+    var modal = modals[index];
+    var modalImg = modal.querySelector('.modal-content');
+    var captionText = modal.querySelector('.modal-caption');
+    
     modal.style.display = 'block';
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
- }
+  }
+});
 
- var span = document.getElementsByClassName('close')[0];
- span.onclick = function () {
-    modal.style.display = 'none';
- }
+// Add click event to each close button
+closeButtons.forEach(function(button) {
+  button.onclick = function() {
+    this.closest('.modal').style.display = 'none';
+  }
+});
+
+// Close when clicking outside the image
+modals.forEach(function(modal) {
+  modal.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+});

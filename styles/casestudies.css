@@ -42,40 +42,6 @@
     flex-direction: column;
     width: 700px;
 }
-/*image zoom on click
-.click-zoom input[type=checkbox] {
-  display: none
-}
-
-.click-zoom img {
-  transition: transform 0.25s ease;
-  cursor: zoom-in
-}
-
-.click-zoom input[type=checkbox]:checked~img {
-  transform: scale(2);
-  cursor: zoom-out
-}
-  */
-
-
-/*compare img
-.compare-container {
-    display: inline-flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.image-before {
-    max-width: 500px;
-    height: auto;
-}
-
-.image-after {
-    max-width: 500px;
-    height: auto;
-}
-*/
 
 /*images*/
 
@@ -166,58 +132,6 @@ p.caption-below {
       width: 100%;
     }
   }
-/*contents*/
-
-.section-title {
-    text-transform: lowercase;
-    margin-top: 16px;
-    margin-bottom: 0px;
-    line-height: 1.4;
-    padding: 8px 0;
-    width: 30%;
-}
-
-.contents-items-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 700px;
-    margin-top: 16px;
-}
-
-.contents-item {
-    margin: 4px 0;
-    display: block;
-}
-
-.contents-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    padding: 4px 0;
-    min-height: 24px; 
-}
-
-.contents-link:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
-.contents-link:hover .arrow {
-    cursor: pointer;
-    transition: transform 300ms;
-    transform: translateX(24px);
-    transition-delay: 150ms;
-}
-
-.contents-link p {
-    font-size: var(--fontSizeM);
-    text-transform: lowercase;
-    margin: 0; 
-}
-
-.case-body {
-    display: flex;
-    flex-direction: column;
-}
 
 /*image slider*/
 
@@ -288,6 +202,59 @@ p.caption-below {
     color: rgb(18, 149, 205);
     font-size: 40px;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+/*contents*/
+
+.section-title {
+    text-transform: lowercase;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    line-height: 1.4;
+    padding: 8px 0;
+    width: 30%;
+}
+
+.contents-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin-top: 16px;
+}
+
+.contents-item {
+    margin: 4px 0;
+    display: block;
+}
+
+.contents-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 4px 0;
+    min-height: 24px; 
+}
+
+.contents-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.contents-link:hover .arrow {
+    cursor: pointer;
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}
+
+.contents-link p {
+    font-size: var(--fontSizeM);
+    text-transform: lowercase;
+    margin: 0; 
+}
+
+.case-body {
+    display: flex;
+    flex-direction: column;
 }
 
 /*responsiveness*/

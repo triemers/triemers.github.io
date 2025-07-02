@@ -261,32 +261,45 @@ p.caption-below {
 
 @media screen and (max-width: 768px) {
 
-.lead-object {
-    display: flex;
-    flex-direction: column;
-}
-
     .case-study-wrapper {
-        margin: 40px;
-        width: 100%;
+        padding: 10px;
+        margin: 0px;
     }
+
+    .lead-object {
+        display: flex;
+        flex-direction: column;
+    }
+
+     .contents-items-wrapper {
+            margin: 0px;
+            max-width: 90%; /*removes fixed 700px from desktop version*/
+        }
 
     .case-section {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        max-width: 100%;
     }
 
     .section-title{
-        width: 100%;
+        width: 90%;
     }
 
     .case-contents {
-        width: 100%;
+        width: 90%;
     }
 
+    .contents-item {
+        margin: 0px;
+    }
+
+    .contents-link {
+        gap: 8px;
+    }
     .inline-img {
-        width: 100%;
+        width: auto;
+        height: auto;
     }
 
     .compare-container {

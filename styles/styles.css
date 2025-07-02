@@ -40,6 +40,7 @@ a, p, h1, h2 {
     color: var(--primaryTextColor);
     text-decoration: none;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 a:hover {

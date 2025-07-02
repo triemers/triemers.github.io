@@ -262,8 +262,16 @@ p.caption-below {
 @media screen and (max-width: 768px) {
 
     .case-study-wrapper {
-        padding: 10px;
+        padding: 10px 20px;
         margin: 0px;
+    }
+
+    .case-title {
+        line-height: 1.2;
+    }
+
+    .case-subhead {
+        font-weight: 400;
     }
 
     .lead-object {
@@ -273,7 +281,7 @@ p.caption-below {
 
      .contents-items-wrapper {
             margin: 0px;
-            max-width: 90%; /*removes fixed 700px from desktop version*/
+            max-width: 100%; /*removes fixed 700px from desktop version*/
         }
 
     .case-section {
@@ -287,7 +295,7 @@ p.caption-below {
     }
 
     .case-contents {
-        width: 90%;
+        width: 100%;
     }
 
     .contents-item {
@@ -304,7 +312,7 @@ p.caption-below {
 
     .compare-container {
         flex-direction: column;
-        width: 100%;
+        max-width: 100%;
     }
 
     .image-before, .image-after {

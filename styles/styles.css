@@ -132,6 +132,7 @@ h3 {
     .header-container, .footer-container {
         max-width: 100%;
         margin: 0px;
+        padding: 0px 20px;
     }
 
     .header-container {
@@ -141,15 +142,16 @@ h3 {
 
     .nav-menu {
         position: fixed;
+        border: 1px solid #333333;
+        padding: 20px;
         top: 0;
         right: -100%;
-        width: 70%;
-        height: 100vh;
+        width: 30%;
+        height: auto;
         background: var(--bgColor);
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
+        align-items: start;
+        gap: 20px;
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 100;
@@ -165,15 +167,15 @@ h3 {
 
     .hamburger span {
         display: block;
-        width: 25px;
-        height: 3px;
-        background: var(--black);
+        width: 20px;
+        height: 2px;
+        background: #333333;
         margin: 5px 0;
         transition: all 0.3s ease;
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -183,4 +185,13 @@ h3 {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    .footer-nav {
+        gap: 20px;
+    }
 }

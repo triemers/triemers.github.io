@@ -257,6 +257,54 @@ p.caption-below {
     flex-direction: column;
 }
 
+/*** Below case cards ***/
+.horizontal-card a {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 0px;
+    align-items: top;
+    max-width: 700px;
+}
+
+.case-description-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-case-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-case-title:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home-case-title h2 {
+    margin: 0px;
+}
+
+.case-card:hover .arrow {
+    cursor: pointer;
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}
+
+.card-img-small {
+    max-height: 150px;
+    width: auto;
+}
+
+.card-img-small:hover {
+    opacity: .5;
+    transition-delay: 100ms;
+}
+
 /*responsiveness*/
 
 @media screen and (max-width: 768px) {
@@ -322,6 +370,20 @@ p.caption-below {
 
     .image-before, .image-after {
         max-width: 100%;
+    }
+
+    .horizontal-card a {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 0px;
+        align-items: top;
+        max-width: 700px;
+    }
+
+    .card-img-small {
+        max-height: 800px;
+        width: auto;
     }
 }
 

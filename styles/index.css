@@ -6,7 +6,7 @@
     grid-template-rows: auto;
     grid-gap: 60px 20px;
     margin: 20px 60px; 
-    flex: 1; /*GPT CODE*/
+    flex: 1; 
 }
 
 /* home title - might be able to get rid of this but keeping in case of conflict between case studies and others */
@@ -50,6 +50,7 @@
 
 .card-img:hover {
     opacity: .5;
+    transition-delay: 100ms;
 }
 
 /* arrow hover - transition in CSS */
@@ -64,12 +65,6 @@
     font-family: var(--fontFamily);
     font-weight: 400;
 }
-
-/*.home-case-title:hover .arrow {
-    transition: transform 300ms;
-    transform: translateX(24px);
-    transition-delay: 150ms;
-}*/
 
 .case-card:hover .arrow { /*creates arrow motion when hovering anything in card*/
     transition: transform 300ms;

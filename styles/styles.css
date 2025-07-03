@@ -10,7 +10,7 @@
     --fontSizeM: 1.25rem; /* 20px descriptions */
     --fontSizeS: 1rem; /* 16px contents, body, nav */
     --fontSizeXS: .75rem; /* 12px captions */
-    --borderRadius: 8px;
+    --borderRadius: 0px;
 }
 
 body {

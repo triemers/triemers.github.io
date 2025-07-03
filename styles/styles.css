@@ -187,8 +187,10 @@ h3 {
 
     footer {
         display: flex;
-        flex-direction: column;
-        align-items: start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
         gap: 10px;
     }
     .footer-nav {

@@ -114,7 +114,8 @@
         display: flex;
         flex-direction: column;
         margin: 0px;
-        width: 100%;
+        padding: 10px;
+        width: auto;
         grid-gap: 20px 20px;
     }
 
@@ -122,6 +123,14 @@
         margin: 40px 0px;
         font-size: var(--fontSizeL);
         line-height: 1.2;
+    }
+
+    .home-case-title h2 {
+        margin: 10px 0px;
+    }
+
+    .case-desc {
+        margin-top: 0px;
     }
 
 }

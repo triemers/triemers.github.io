@@ -284,6 +284,11 @@ p.caption-below {
             max-width: 100%; /*removes fixed 700px from desktop version*/
         }
 
+    .contents-link p {
+        font-size: var(--fontSizeS);
+        text-transform: lowercase;
+        margin: 0; 
+    }
     .case-section {
         display: flex;
         flex-direction: column;

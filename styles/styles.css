@@ -143,15 +143,15 @@ h3 {
     .nav-menu {
         position: fixed;
         border: 1px solid #333333;
-        padding: 20px;
+        padding: 72px 26px 26px 26px;
         top: 0;
         right: -100%;
         width: 30%;
         height: auto;
         background: var(--bgColor);
         flex-direction: column;
-        align-items: start;
-        gap: 20px;
+        align-items: end;
+        gap: 16px;
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 100;

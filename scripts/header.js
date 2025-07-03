@@ -1,4 +1,3 @@
-//image lazy loading
 
 //hamburger nav
 const hamburger = document.querySelector('.hamburger');
@@ -16,8 +15,4 @@ const hamburger = document.querySelector('.hamburger');
                 navMenu.classList.remove('active');
             });
         });
-
-//scroll interactions
-
-//image zoom/lightbox
 

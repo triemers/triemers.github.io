@@ -88,3 +88,6 @@ modals.forEach(function(modal) {
     }
   }
 });
+
+//image lazy loading
+

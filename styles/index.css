@@ -40,7 +40,7 @@
     flex-direction: column;
 }
 
-.card-img { /* FIX THIS LCI Not the right aspect ratio*/
+.card-img { 
     width: 100%;
     height: auto;
     opacity: 1;
@@ -65,7 +65,13 @@
     font-weight: 400;
 }
 
-.home-case-title:hover .arrow {
+/*.home-case-title:hover .arrow {
+    transition: transform 300ms;
+    transform: translateX(24px);
+    transition-delay: 150ms;
+}*/
+
+.case-card:hover .arrow { /*creates arrow motion when hovering anything in card*/
     transition: transform 300ms;
     transform: translateX(24px);
     transition-delay: 150ms;
@@ -86,7 +92,7 @@
 }
 
 .resume-link:hover {
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
 }
 .resume-link:hover .arrow {
@@ -131,6 +137,10 @@
 
     .case-desc {
         margin-top: 0px;
+    }
+
+    .resume-link {
+        text-decoration: underline;
     }
 
 }

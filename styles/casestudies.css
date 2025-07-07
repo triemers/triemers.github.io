@@ -249,6 +249,7 @@ p.caption-below {
 .case-body {
     display: flex;
     flex-direction: column;
+    max-width: 700px;
 }
 
 /*** Below case cards ***/

@@ -36,7 +36,6 @@
 .case-contents p {
     display: flex;
     flex-direction: column;
-    width: 700px;
 }
 
 /*images*/
@@ -353,11 +352,11 @@ p.caption-below {
     .contents-link {
         gap: 8px;
     }
-    .inline-img {
-        width: auto;
+
+    .myImg {
+        width: 100%;
         height: auto;
     }
-
     .compare-container {
         flex-direction: column;
         max-width: 100%;

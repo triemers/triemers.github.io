@@ -230,7 +230,7 @@ p.caption-below {
 }
 
 .contents-link:hover {
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
 }
 .contents-link:hover .arrow {

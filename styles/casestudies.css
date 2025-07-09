@@ -33,6 +33,10 @@
     border-top: var(--border);
 }
 
+.case-contents {
+    margin: 10px 0px;
+}
+
 .case-contents p {
     display: flex;
     flex-direction: column;

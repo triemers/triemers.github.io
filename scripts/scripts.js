@@ -36,56 +36,60 @@ modals.forEach(function(modal) {
   }
 }); 
 
+
 //before/after image slider
-const slider = document.querySelector('.slider-container');
-const handle = document.querySelector('.slider-handle');
-const beforeImage = document.querySelector('.before');
+document.querySelectorAll('.slider-container').forEach((slider) => {
+    const handle = slider.querySelector('.slider-handle');
+    const beforeImg = slider.querySelector('.before');
+    let isDragging = false;
 
-let isDragging = false;
+    // Mouse events
+    handle.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        document.body.style.cursor = 'ew-resize';
+        e.preventDefault();
+    });
 
-handle.addEventListener('mousedown', () => {
-    isDragging = true;
-    document.body.style.cursor = 'ew-resize';
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        
+        const rect = slider.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        x = Math.max(0, Math.min(x, rect.width)); // Keep within bounds
+        
+        const percent = (x / rect.width) * 100;
+        
+        handle.style.left = `${percent}%`;
+        beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`; // Clip from right
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+        document.body.style.cursor = '';
+    });
+
+    // Touch events
+    handle.addEventListener('touchstart', () => {
+        isDragging = true;
+    });
+
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const touch = e.touches[0];
+        const rect = slider.getBoundingClientRect();
+        let x = touch.clientX - rect.left;
+        x = Math.max(0, Math.min(x, rect.width));
+        
+        const percent = (x / rect.width) * 100;
+        
+        handle.style.left = `${percent}%`;
+        beforeImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`; // Clip from right
+    });
+
+    document.addEventListener('touchend', () => {
+        isDragging = false;
+    });
 });
-
-document.addEventListener('mouseup', () => {
-    isDragging = false;
-    document.body.style.cursor = '';
-});
-
-document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    
-    const rect = slider.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    
-    // Keep handle within slider bounds
-    x = Math.max(0, Math.min(x, rect.width));
-    
-    const percent = (x / rect.width) * 100;
-    
-    handle.style.left = `${percent}%`;
-    beforeImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
-});
-
-// Touch events for mobile/tablet sliders
-handle.addEventListener('touchstart', () => {
-    isDragging = true;
-});
-
-document.addEventListener('touchend', () => {
-    isDragging = false;
-});
-
-document.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    
-    const rect = slider.getBoundingClientRect();
-    const x = e.touches[0].clientX - rect.left;
-    const percent = (x / rect.width) * 100;
-    
-    handle.style.left = `${percent}%`;
-    beforeImage.style.clipPath = `inset(0 0 0 ${percent}%)`;
-}); 
 

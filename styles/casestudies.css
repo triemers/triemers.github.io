@@ -60,7 +60,7 @@ p.caption-below {
   .modal {  /* The Modal (background) */
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 8; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -70,12 +70,20 @@ p.caption-below {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
+
+  .modal:hover {
+    cursor: pointer;
+  }
   
   /* Modal Content (Image) */
   .modal-content {
     margin: auto;
     display: block;
     width: 80%;
+  }
+
+  .modal-content:hover {
+    cursor: auto;
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */

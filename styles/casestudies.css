@@ -374,7 +374,7 @@ p.caption-below {
     }
 
     .myImg {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
     .compare-container {

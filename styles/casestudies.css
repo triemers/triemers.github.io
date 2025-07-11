@@ -325,6 +325,12 @@ p.caption-below {
     transition-delay: 100ms;
 }
 
+.about-subhead {
+    max-width: 700px;
+    font-weight: 400;
+    font-size: var(--fontSizeM);
+}
+
 /*responsiveness*/
 
 @media screen and (max-width: 768px) {

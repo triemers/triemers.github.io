@@ -31,6 +31,13 @@
     gap: 0px 20px;
     margin: 20px 0px;
     border-top: var(--border);
+    align-items: flex-start;
+}
+
+.case-contents {
+    margin: 10px 0px;
+    width: 70%;
+    flex-grow: 1;
 }
 
 .case-contents p {
@@ -60,7 +67,7 @@ p.caption-below {
   .modal {  /* The Modal (background) */
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 8; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -70,12 +77,20 @@ p.caption-below {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
+
+  .modal:hover {
+    cursor: pointer;
+  }
   
   /* Modal Content (Image) */
   .modal-content {
     margin: auto;
     display: block;
     width: 80%;
+  }
+
+  .modal-content:hover {
+    cursor: auto;
   }
   
   /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -132,11 +147,11 @@ p.caption-below {
     position: relative;
     width: 100%;
     max-width: 700px;
-    margin: auto;
     overflow: hidden;
     border: 1px solid #333;
     border-radius: 0px;
-    height: 400px; /* Add fixed height */
+    height: 400px; 
+    align-self: start;
 }
 
 .tall-slider {
@@ -149,52 +164,59 @@ p.caption-below {
 }
 
 .slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Prevents image from blocking drag */
 }
 
 .before {
     z-index: 2;
-    clip-path: inset(0 0 0 50%);
+    clip-path: inset(0 50% 0 0); /* Start half-revealed */
+}
+
+.after {
+    z-index: 1;
 }
 
 .slider-handle {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 60px; /* Wider handle */
+    width: 4px;
     height: 100%;
-    background-color: transparent;
+    background: white;
     cursor: ew-resize;
     z-index: 3;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Handle grip design */
+/* Circle handle */
 .slider-handle::after {
     content: "";
-    display: block;
-    width: 6px;
-    height: 50px;
-    background: rgb(18, 149, 205);
-    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #333;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-/* Optional: Add arrows to the handle */
-.slider-handle::before {
-    content: "↔";
-    position: absolute;
-    color: rgb(18, 149, 205);
-    font-size: 40px;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+/* Add arrow indicators inside circle */
+.slider-handle::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M15 18l-6-6 6-6'/%3E%3C/svg%3E"), 
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M9 18l6-6-6-6'/%3E%3C/svg%3E");
+    background-position: 30% center, 70% center;
+    background-repeat: no-repeat;
+    background-size: 12px 24px;
 }
 
 /*contents*/
@@ -207,6 +229,9 @@ p.caption-below {
     padding: 8px 0;
     width: 30%;
     font-weight: 700;
+    position: sticky;
+    top: 20px; 
+    align-self: flex-start;
 }
 
 .contents-items-wrapper {
@@ -340,6 +365,8 @@ p.caption-below {
 
     .section-title{
         width: 90%;
+        position: relative;
+        top: 0px;
     }
 
     .case-contents {
@@ -355,7 +382,7 @@ p.caption-below {
     }
 
     .myImg {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
     .compare-container {

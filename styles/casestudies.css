@@ -324,6 +324,15 @@ p.caption-below {
     opacity: .5;
     transition-delay: 100ms;
 }
+/*about page specific styles, mostly lead area */
+.about-lead-sub {
+        display: flex;
+        flex-direction: row;
+        gap: 10px 60px;
+        margin-bottom: 20px;
+        width: 100%;
+}
+
 
 .about-subhead {
     max-width: 700px;
@@ -331,6 +340,16 @@ p.caption-below {
     font-size: var(--fontSizeM);
 }
 
+.about-img-container {
+    width: 30%;
+}
+
+.about-lead-img {
+    width: auto;
+    height: 300px;
+    display: block;
+    margin: auto;
+}
 /*responsiveness*/
 
 @media screen and (max-width: 768px) {
@@ -412,6 +431,14 @@ p.caption-below {
     .card-img-small {
         max-height: 800px;
         width: auto;
+    }
+
+    .about-lead-sub {
+        flex-direction: column;
+    }
+
+    .about-img-container {
+        display: none;
     }
 }
 

@@ -31,10 +31,13 @@
     gap: 0px 20px;
     margin: 20px 0px;
     border-top: var(--border);
+    align-items: flex-start;
 }
 
 .case-contents {
     margin: 10px 0px;
+    width: 70%;
+    flex-grow: 1;
 }
 
 .case-contents p {
@@ -144,11 +147,11 @@ p.caption-below {
     position: relative;
     width: 100%;
     max-width: 700px;
-    margin: auto;
     overflow: hidden;
     border: 1px solid #333;
     border-radius: 0px;
-    height: 400px; /* Add fixed height */
+    height: 400px; 
+    align-self: start;
 }
 
 .tall-slider {
@@ -226,6 +229,9 @@ p.caption-below {
     padding: 8px 0;
     width: 30%;
     font-weight: 700;
+    position: sticky;
+    top: 20px; 
+    align-self: flex-start;
 }
 
 .contents-items-wrapper {

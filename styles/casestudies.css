@@ -324,7 +324,7 @@ p.caption-below {
     opacity: .5;
     transition-delay: 100ms;
 }
-/*about page specific styles, mostly lead area */
+/*about page specific styles */
 .about-lead-sub {
         display: flex;
         flex-direction: row;
@@ -332,7 +332,6 @@ p.caption-below {
         margin-bottom: 20px;
         width: 100%;
 }
-
 
 .about-subhead {
     max-width: 700px;
@@ -349,6 +348,17 @@ p.caption-below {
     height: 300px;
     display: block;
     margin: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.gallery > img {
+    width: 30%;
+    height: auto;
 }
 /*responsiveness*/
 
@@ -439,6 +449,15 @@ p.caption-below {
 
     .about-img-container {
         display: none;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+    
+    .gallery > img {
+        width: 90%;
+        height: auto;
     }
 }
 

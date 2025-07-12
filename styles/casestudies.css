@@ -429,6 +429,9 @@ p.caption-below {
         max-width: 100%;
     }
 
+    .horizontal-card {
+        width: 100%;
+    }
     .horizontal-card a {
         display: flex;
         flex-direction: column;
@@ -438,9 +441,10 @@ p.caption-below {
         max-width: 700px;
     }
 
-    .card-img-small {
-        max-height: 800px;
-        width: auto;
+    .card-img-small { /**FIX THIS ****/
+        width: 100%;
+        height: auto;
+        max-height: 400px;
     }
 
     .about-lead-sub {

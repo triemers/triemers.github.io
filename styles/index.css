@@ -99,6 +99,8 @@
 
 #resume-1 {
     grid-column: 1 / span 1;
+    cursor: pointer;
+    align-self: flex-start;
 }
 
 #resume-2 {

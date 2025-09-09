@@ -465,3 +465,18 @@ p.caption-below {
     }
 }
 
+@media screen and (min-width: 1800px) {
+
+    .case-subhead {
+        max-width: 1200px;
+    }
+
+    .lead-img {
+        max-width: 1200px;
+        height: auto;
+    }
+
+    .gallery {
+        width: 700px;
+    }
+}

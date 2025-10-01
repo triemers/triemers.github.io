@@ -8,6 +8,7 @@ li {
     font-family: var(--fontFamily);
     font-size: var(--fontSizeS);
     line-height: 1.4;
+    max-width: 700px;
 }
 
 /*components*/
@@ -44,6 +45,12 @@ li {
     margin: 10px 0px;
     width: 70%;
     flex-grow: 1;
+}
+
+.case-contents > h3:not(:first-child) {
+    border-top: var(--border);
+    width: 700px;
+    padding-top: 24px;
 }
 
 /*images*/

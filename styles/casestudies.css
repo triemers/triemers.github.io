@@ -4,6 +4,12 @@
     font-weight: 700;
 }
 
+li {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeS);
+    line-height: 1.4;
+}
+
 /*components*/
 .case-study-wrapper {
     display: flex;
@@ -14,8 +20,8 @@
 /*lead*/
 .lead-object {
     display: flex;
-    flex-direction: column;
-    gap: 10px 20px;
+    flex-direction: row;
+    gap: 40px;
     margin-bottom: 20px;
 
 }
@@ -38,11 +44,6 @@
     margin: 10px 0px;
     width: 70%;
     flex-grow: 1;
-}
-
-.case-contents p {
-    display: flex;
-    flex-direction: column;
 }
 
 /*images*/

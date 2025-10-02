@@ -91,6 +91,9 @@ h3 {
     color: var(--black);
 }
 
+.nav-menu > a {
+    text-transform: capitalize;
+}
  .nav-menu, .footer-nav {
             display: flex;
             gap: 40px;

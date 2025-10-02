@@ -38,7 +38,7 @@ li {
     display: flex;
     flex-direction: row;
     gap: 0px 20px;
-    margin: 20px 0px;
+    margin: 0px;
     border-top: var(--border);
     align-items: flex-start;
 }

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicle.com - Header Redesign | triemers-ux</title>
+    <link rel="stylesheet" href="/styles/casestudies.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+          <a href="/" class="logo">TR</a>
+          
+          <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          
+          <nav class="nav-menu">
+              <a href="/pages/about.html" class="nav-link">About</a>
+              <a href="/files/ResumeLong.pdf" class="nav-link" target="_blank">Resume</a>
+          </nav>
+      </header>
+    </div>
+
+    <div class="case-study-wrapper">
+      <div class="lead-object">
+        <div class="lead-text">
+          <h1 class="case-title">Header Redesign - Chronicle.com</h1>
+          <h3 class="case-subhead">designing and improving digital products for higher education journalism and data hub <i>The Chronicle of Higher Education</i></h3>
+          <p><strong>Role:</strong> Lead Product Designer<br>
+          <strong>Timeline:</strong> 2023 - 2024<br>
+          <strong>Team:</strong> 3 Engineers, 1 Product Manager, C-Suite Stakeholders<br>
+          <strong>Tools:</strong> Figma, FigJam, Adobe Analytics</p>
+        </div>
+        <img class="lead-img" src="/images/chronicle/chronicle.com-cover-img-1.png" alt="Screenshot of the new Chronicle.com header on the homepage">
+      </div>
+
+      <div class="case-section" id="contents">
+        <h2 class="section-title">Contents</h2>
+        <div class="contents-items-wrapper">
+          <a href="#Challenge" class="contents-item">
+            <div class="contents-link">
+              <p>The Challenge</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Research" class="contents-item">
+            <div class="contents-link">
+              <p>Research & Analysis</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Restart" class="contents-item">
+            <div class="contents-link">
+              <p>Starting from Scratch</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Solution" class="contents-item">
+            <div class="contents-link">
+              <p>The Solution: A Responsive Header System</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Mobile" class="contents-item">
+            <div class="contents-link">
+              <p>Mobile Simplification</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Result" class="contents-item">
+            <div class="contents-link">
+              <p>The Result</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Learned" class="contents-item">
+            <div class="contents-link">
+              <p>What I Learned</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="case-section" id="HeadFoot">
+        <h2 class="section-title">Header & Footer System Design</h2>
+        <div class="case-contents">
+        </div>
+      </div>
+
+      <div class="case-section" id="Challenge">
+        <h2 class="section-title">The Challenge</h2>
+        <div class="case-contents">
+          <p class="case-body">Chronicle.com needed a header system that could serve diverse user needs across different page types—from breaking news to in-depth reports to data tools. The existing header was one-size-fits-all, forcing the same navigation experience on readers regardless of their goals or the content they were engaging with.</p>
+
+          <p class="case-body"><strong>Key problems:</strong></p>
+          <ul class="case-body">
+            <li><strong>Context-blind navigation:</strong> The header didn't adapt to help users accomplish different goals on different page types</li>
+            <li><strong>Competing priorities:</strong> Stakeholders across departments had different ideas about what should be prominent in the header</li>
+            <li><strong>Scalability concerns:</strong> Adding new features or page types required custom header modifications rather than working within a flexible system</li>
+            <li><strong>Mobile experience:</strong> The desktop-first approach created a cluttered, overwhelming mobile navigation</li>
+          </ul>
+
+          <p class="case-body">The goal was to design a header system—not just a header—that could intelligently serve users' needs while balancing business priorities and remaining maintainable for our small development team.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Research">
+        <h2 class="section-title">Research & Analysis</h2>
+        <div class="case-contents">
+          <p class="case-body"><strong>Analytics Deep Dive</strong><br>
+          I started by analyzing user behavior in Adobe Analytics to understand how people actually navigated the site and used the existing header. This revealed patterns in navigation flows, common entry and exit points, and which header elements were being clicked (or ignored) on different page types.</p>
+
+          <p class="case-body"><strong>Key insights:</strong></p>
+          <ul class="case-body">
+            <li>Users navigating from the homepage had different needs than those landing on article pages from search or social media</li>
+            <li>Certain header elements had high visibility but low click-through, suggesting they were creating visual noise without adding value</li>
+            <li>Mobile users showed clear preference for streamlined navigation, often bypassing header elements entirely to scroll to content</li>
+          </ul>
+
+          <p class="case-body"><strong>Initial Design Direction</strong><br>
+          Based on this research, we settled on a design direction and began development. However, midway through implementation, The Chronicle introduced new branding guidelines that fundamentally changed our visual language and provided justification for starting the project from square one.</p>
+
+          <p class="case-body">Rather than viewing this as a setback, I saw it as an opportunity to involve stakeholders more deeply and build stronger alignment from the ground up.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Restart">
+        <h2 class="section-title">Starting from Scratch: Stakeholder Workshops</h2>
+        <div class="case-contents">
+          <p class="case-body">The rebrand gave me the chance to conduct design workshops with key business stakeholders and C-suite executives before jumping into solutions. These workshops were structured to focus exclusively on analysis, goals, and priorities—stakeholders were explicitly discouraged from proposing solutions or debating design details.</p>
+
+          <p class="case-body"><strong>Workshop Structure</strong><br>
+          Over a series of sessions, I facilitated exercises that helped stakeholders:</p>
+          <ul class="case-body">
+            <li>Articulate their department's goals for the header without prescribing solutions</li>
+            <li>Prioritize competing objectives through voting and discussion</li>
+            <li>Identify user scenarios where the header needed to serve different needs</li>
+            <li>Define success metrics that would guide design decisions</li>
+          </ul>
+
+          <img class="myImg" src="/images/chronicle/header-figjam.png" alt="Screenshot of a Figjam board that has been completed showing a step by step of the stakeholder design workshops">
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="/images/chronicle/header-figjam.png">
+            <div class="modal-caption">The Figjam board after the first design workshop.</div>
+          </div>
+          <p class="caption-below">Figjam showing the process of the stakeholder design workshops.</p>
+
+          <p class="case-body"><strong>Workshop Outcomes</strong><br>
+          We emerged from these workshops with firm requirements, clear scope, and most importantly, a prioritized list of goals that everyone had agreed upon. This alignment proved invaluable later when making difficult trade-off decisions during the design process.</p>
+
+          <p class="case-body">The workshops also revealed something crucial: different page types needed different header configurations. A reader browsing the homepage had different navigation needs than someone reading an in-depth article or using a data tool.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Solution">
+        <h2 class="section-title">The Solution: A Responsive Header System</h2>
+        <div class="case-contents">
+          <p class="case-body">Rather than designing a single header, I designed a flexible header system with two core components that work together to serve users' needs on each page type.</p>
+
+          <h3><strong>Core Header + Slim Header Architecture</strong></h3>
+          <p class="case-body">The system consists of two states:</p>
+
+          <p class="case-body"><strong>The Core Header</strong> appears at the top of pages when users first land, providing full navigation context and key actions. It includes all primary navigation elements, search, account access, and any page-specific tools.</p>
+
+          <p class="case-body"><strong>The Slim Header</strong> replaces the core header on scroll, becoming a sticky navigation bar that stays with users as they read or interact with content. This slim version maintains essential navigation while minimizing screen real estate, and crucially, it's customizable for each page type.</p>
+
+          <p class="case-body">This two-header approach means:</p>
+          <ul class="case-body">
+            <li>Users get full context when they arrive on a page</li>
+            <li>Navigation doesn't disappear or take up valuable reading space once they start engaging with content</li>
+            <li>Each page type can feature different options in the slim header based on what users need in that context</li>
+            <li>We can A/B test different slim header configurations without rebuilding the entire header</li>
+          </ul>
+
+          <img class="myImg" src="/images/chronicle/system-diagram.png" alt="A diagram of how the header might change to serve user objectives on different page types.">
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="/images/chronicle/system-diagram.png">
+            <div class="modal-caption">The diagram of how the new header and its' states work to better serve user objectives depending on page type.</div>
+          </div>
+          <p class="caption-below">The diagram of how the new header and its states work to better serve user objectives depending on page type.</p>
+
+          <h3><strong>Customization for Page Context</strong></h3>
+          <p class="case-body">The slim header adapts based on page type:</p>
+          <ul class="case-body">
+            <li><strong>Article pages:</strong> Feature sharing tools, save functionality, and related content navigation</li>
+            <li><strong>Data tools:</strong> Prioritize filter controls and export options</li>
+            <li><strong>Section pages:</strong> Emphasize topic navigation and newsletter signup</li>
+            <li><strong>Homepage:</strong> Focus on search and section browsing</li>
+          </ul>
+
+          <p class="case-body">This flexibility means users always have relevant tools at hand without cluttering the interface with options they won't use in that context.</p>
+
+          <img class="myImg" src="/images/chronicle/high-fidelity-system-samples.png" alt="Screenshots of the header and pieces in different states, such as scrolled, unscrolled, and on different page types.">
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="/images/chronicle/high-fidelity-system-samples.png">
+            <div class="modal-caption">High-fidelity mockups of various header states, such as scrolled, unscrolled, and on different page types.</div>
+          </div>
+          <p class="caption-below">High-fidelity mockups of various header states, such as scrolled, unscrolled, and on different page types.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Mobile">
+        <h2 class="section-title">Mobile Simplification</h2>
+        <div class="case-contents">
+          <p class="case-body">Mobile required a different approach. With limited screen real estate and user feedback consistently requesting a cleaner reading experience, I prioritized simplicity over feature parity with desktop.</p>
+
+          <p class="case-body"><strong>Mobile Strategy:</strong></p>
+          <ul class="case-body">
+            <li>Streamlined navigation menu with only essential top-level categories</li>
+            <li>Prioritized search and account access as primary actions</li>
+            <li>Minimal sticky header that appears on scroll-up only (disappears on scroll-down to maximize reading space)</li>
+            <li>Context-specific quick actions available through a contextual menu rather than persistent header elements</li>
+          </ul>
+
+          <p class="case-body">This approach respected the mobile reading experience while ensuring users could still access core functionality when needed. Testing showed that mobile users preferred this lightweight approach and were able to find navigation options when they needed them without feeling overwhelmed by options when they didn't.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Result">
+        <h2 class="section-title">The Result</h2>
+        <div class="case-contents">
+          <p class="case-body">The new header system launched as an MVP that established the flexible architecture for future iterations.</p>
+
+          <img class="myImg" src="/images/chronicle/chronicle.com-cover-img-1.png" alt="Screenshot of the MVP version of the new header on the homepage of Chronicle.com">
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="/images/chronicle/chronicle.com-cover-img-1.png">
+            <div class="modal-caption">The MVP of the new header, on the home page of Chronicle.com</div>
+          </div>
+          <p class="caption-below">The MVP of the new header, on the home page of Chronicle.com.</p>
+
+          <p class="case-body"><strong>What we achieved:</strong></p>
+          <ul class="case-body">
+            <li><strong>Flexible system architecture</strong> that can adapt to different page types and user needs without requiring full redesigns</li>
+            <li><strong>Improved stakeholder alignment</strong> through the workshop process, making future header changes easier to implement with buy-in</li>
+            <li><strong>Cleaner mobile experience</strong> that respects reading flow while maintaining navigation accessibility</li>
+            <li><strong>Foundation for navigation system rework</strong> that informed broader site architecture improvements</li>
+            <li><strong>Scalable approach</strong> that the small dev team can maintain and iterate on without constant designer involvement</li>
+          </ul>
+
+          <p class="case-body"><strong>Impact:</strong><br>
+          The header system proved its value by enabling rapid experimentation with different slim header configurations for A/B testing. The engineering team noted that adding new page-specific header variations became significantly easier. Most importantly, the system laid groundwork for a complete navigation architecture overhaul that's currently in progress.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Learned">
+        <h2 class="section-title">What I Learned</h2>
+        <div class="case-contents">
+          <p class="case-body"><strong>Constraints can be opportunities.</strong> The mid-project rebrand that forced us to restart actually led to better stakeholder alignment and a stronger final solution than we would have achieved by pushing through with the original design.</p>
+
+          <p class="case-body"><strong>Design workshops need clear guardrails.</strong> By explicitly prohibiting solution discussion and focusing on goals and priorities, we avoided the typical "design by committee" problems and gave stakeholders productive ways to contribute their expertise.</p>
+
+          <p class="case-body"><strong>Systems thinking pays off.</strong> Designing a system rather than a single header created flexibility that continues to provide value as the site evolves. The investment in architecture upfront enabled faster iteration later.</p>
+
+          <p class="case-body"><strong>Context is everything.</strong> The realization that different page types need different headers seems obvious in retrospect, but it was a breakthrough that came from really listening to analytics data and user behavior rather than assuming one solution could serve all needs.</p>
+
+          <p class="case-body"><strong>Mobile isn't just small desktop.</strong> Respecting mobile as its own experience with different constraints and user expectations led to a better solution than trying to cram desktop functionality into a small screen.</p>
+        </div>
+      </div>
+
+      <!--Below section-->   
+      <div class="case-section below-nav">
+        <h2 class="section-title">More Work</h2>
+        <div class="more-cards">
+
+          <div class="case-card horizontal-card"> 
+            <a href="/pages/chronicle-cms-redesign.html">
+              <img src="/images/chronicle/Chonicle-long-lead.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>Chronicle.com Design System</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">A year-long CMS redesign that eliminated technical debt and established a scalable design system</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="case-card horizontal-card">
+            <a href="/pages/lostcanyonimports.html">
+              <img src="/images/lostcanyoncard.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>Lost Canyon Imports</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="case-card horizontal-card"> 
+            <a href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9" target="_blank">
+              <img src="/images/amazonnikecard.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>Amazon v. Nike</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">Keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </div>  
+
+    </div>  
+
+    <!--Footer-->
+    <div class="footer-container">
+      <footer>
+        <div class="footer-left">
+          <a href="/" class="logo">TR</a>
+          <div class="footer-email">triemers12@gmail.com</div>
+        </div>
+        
+        <nav class="footer-nav">
+          <a href="/pages/about.html" class="footer-link">About</a>
+          <a href="/files/ResumeLong.pdf" class="footer-link">Resume</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/scripts.js"></script>
+  </body>
+</html>

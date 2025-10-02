@@ -11,7 +11,6 @@ li {
     max-width: 700px;
 }
 
-/*components*/
 .case-study-wrapper {
     display: flex;
     flex-direction: column;
@@ -21,15 +20,18 @@ li {
 /*lead*/
 .lead-object {
     display: flex;
-    flex-direction: row;
     gap: 40px;
     margin-bottom: 20px;
-
 }
 
-.lead-img { /*may want to have long-type images here? consider flex?*/
-    width: auto;
+.lead-img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
 }
+
+
 
 /*case-section*/
 .case-section {
@@ -386,11 +388,6 @@ p.caption-below {
         font-weight: 400;
     }
 
-    .lead-object {
-        display: flex;
-        flex-direction: column;
-    }
-
      .contents-items-wrapper {
             margin: 0px;
             max-width: 100%; /*removes fixed 700px from desktop version*/
@@ -471,6 +468,18 @@ p.caption-below {
     .gallery > img {
         width: 90%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+        .lead-object {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .lead-img {
+        width: auto;
     }
 }
 

@@ -4,7 +4,13 @@
     font-weight: 700;
 }
 
-/*components*/
+li {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeS);
+    line-height: 1.4;
+    max-width: 700px;
+}
+
 .case-study-wrapper {
     display: flex;
     flex-direction: column;
@@ -14,15 +20,18 @@
 /*lead*/
 .lead-object {
     display: flex;
-    flex-direction: column;
-    gap: 10px 20px;
+    gap: 40px;
     margin-bottom: 20px;
-
 }
 
-.lead-img { /*may want to have long-type images here? consider flex?*/
-    width: auto;
+.lead-img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
 }
+
+
 
 /*case-section*/
 .case-section {
@@ -36,13 +45,14 @@
 
 .case-contents {
     margin: 10px 0px;
-    width: 70%;
+    width: 700px;
     flex-grow: 1;
 }
 
-.case-contents p {
-    display: flex;
-    flex-direction: column;
+.case-contents > h3:not(:first-child) {
+    border-top: var(--border);
+    width: 700px;
+    padding-top: 24px;
 }
 
 /*images*/
@@ -225,6 +235,7 @@ p.caption-below {
     text-transform: lowercase;
     margin-top: 16px;
     margin-bottom: 0px;
+    margin-right: 40px;
     line-height: 1.4;
     padding: 8px 0;
     width: 30%;
@@ -234,15 +245,16 @@ p.caption-below {
     align-self: flex-start;
 }
 
+
 .contents-items-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 700px;
     margin-top: 16px;
 }
 
 .contents-item {
-    margin: 4px 0;
     display: block;
 }
 
@@ -252,6 +264,7 @@ p.caption-below {
     gap: 16px;
     padding: 4px 0;
     min-height: 24px; 
+    font-size: var(--fontSizeS);
 }
 
 .contents-link:hover {
@@ -377,11 +390,6 @@ p.caption-below {
         font-weight: 400;
     }
 
-    .lead-object {
-        display: flex;
-        flex-direction: column;
-    }
-
      .contents-items-wrapper {
             margin: 0px;
             max-width: 100%; /*removes fixed 700px from desktop version*/
@@ -462,6 +470,18 @@ p.caption-below {
     .gallery > img {
         width: 90%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+        .lead-object {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .lead-img {
+        width: auto;
     }
 }
 

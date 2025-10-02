@@ -35,7 +35,7 @@ body {
     font-size: var(--fontSizeM);
 }
 
-a, p, h1, h2 {
+a, p, h1, h2, li {
     font-family: var(--fontFamily);
     color: var(--primaryTextColor);
     text-decoration: none;
@@ -64,8 +64,12 @@ h2 { /* check that this includes the case study headers? */
 }
 
 h3 {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeM);
+    font-weight: bold;
     line-height: 1.4;
 }
+
 
 /*header/footer*/
 .header-container, .footer-container {

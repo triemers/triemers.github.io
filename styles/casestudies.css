@@ -1,6 +1,6 @@
 /*text */
 .case-title {
-    text-transform: lowercase;
+    text-transform: none;
     font-weight: 700;
 }
 
@@ -232,7 +232,7 @@ p.caption-below {
 /*contents*/
 
 .section-title {
-    text-transform: lowercase;
+    text-transform: none;
     margin-top: 16px;
     margin-bottom: 0px;
     margin-right: 40px;
@@ -261,8 +261,8 @@ p.caption-below {
 .contents-link {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
-    padding: 4px 0;
+    gap: 12px;
+    padding: 4px 0px;
     min-height: 24px; 
     font-size: var(--fontSizeS);
 }
@@ -279,8 +279,8 @@ p.caption-below {
 }
 
 .contents-link p {
-    font-size: var(--fontSizeM);
-    text-transform: lowercase;
+    font-size: var(--fontSizeS);
+    text-transform: none;
     margin: 0; 
 }
 
@@ -397,7 +397,7 @@ p.caption-below {
 
     .contents-link p {
         font-size: var(--fontSizeS);
-        text-transform: lowercase;
+        text-transform: none;
         margin: 0; 
     }
     .case-section {

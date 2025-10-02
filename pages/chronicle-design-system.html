@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronicle.com - CMS Redesign | triemers-ux</title>
+    <link rel="stylesheet" href="/styles/casestudies.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="header-container">
+      <header>
+          <a href="/" class="logo">TR</a>
+          
+          <div class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          
+          <nav class="nav-menu">
+              <a href="/pages/about.html" class="nav-link">about</a>
+              <a href="/files/ResumeLong.pdf" class="nav-link" target="_blank">resume</a>
+          </nav>
+      </header>
+    </div>
+
+    <div class="case-study-wrapper">
+      <div class="lead-object">
+        <div class="lead-text">
+          <h1 class="case-title">chronicle.com</h1>
+          <h3 class="case-subhead">designing and improving digital products for higher education journalism and data hub <i>The Chronicle of Higher Education</i></h3>
+          <p><strong>Role:</strong> Lead Product Designer<br>
+          <strong>Timeline:</strong> August 2023 - September 2024<br>
+          <strong>Team:</strong> Myself, 3 Engineers, Product Manager<br>
+          <strong>Tools:</strong> Figma, Figjam, LESS/CSS, Adobe Analytics</p>
+        </div>
+        <img class="lead-img" src="/images/chronicle/Chonicle-long-lead.png" alt="a macbook and phone showing screenshots of the home page of chronicle.com">
+      </div>
+
+      <div class="case-section" id="contents">
+        <h2 class="section-title">Contents</h2>
+        <div class="contents-items-wrapper">
+          <a href="#Challenge" class="contents-item">
+            <div class="contents-link">
+              <p>The Challenge</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Research" class="contents-item">
+            <div class="contents-link">
+              <p>Research & Discovery</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Strategy" class="contents-item">
+            <div class="contents-link">
+              <p>Design Strategy</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Rebrand" class="contents-item">
+            <div class="contents-link">
+              <p>The Plot Twist: Mid-Project Rebrand</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#QA" class="contents-item">
+            <div class="contents-link">
+              <p>Design QA Standards</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Implementation" class="contents-item">
+            <div class="contents-link">
+              <p>Implementation & Training</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Result" class="contents-item">
+            <div class="contents-link">
+              <p>The Result</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+          <a href="#Learned" class="contents-item">
+            <div class="contents-link">
+              <p>What I Learned</p>
+              <div class="arrow">→</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="case-section" id="Challenge">
+        <h2 class="section-title">The Challenge</h2>
+        <div class="case-contents">
+          <p class="case-body">Chronicle.com's CMS had evolved organically over years, accumulating significant design and technical debt. Editorial teams were frustrated with inconsistent components, limited functionality, and a dated visual appearance that no longer reflected the publication's authority in higher education journalism.</p>
+          
+          <p class="case-body"><strong>Key problems we identified:</strong></p>
+          <ul class="case-body">
+            <li><strong>Inconsistent user experience:</strong> Components had inconsistent UI and accessibility issues, confusing readers and diluting brand trust</li>
+            <li><strong>Editorial team friction:</strong> Editorial and visuals staff had to work around CMS limitations and wished for more flexibility in how they told stories</li>
+            <li><strong>Mounting technical debt:</strong> Lots of one-off CSS overrides, inconsistent variables and properties applied across the site, along with improperly built modules</li>
+            <li><strong>Visual stagnation:</strong> The site's appearance hadn't evolved with modern web standards, impacting perceived credibility</li>
+          </ul>
+
+          <p class="case-body">The business need was clear: modernize the platform without disrupting daily publishing operations across a newsroom serving thousands of higher education professionals.</p>
+        
+        </div>
+      </div>
+
+      <div class="case-section" id="Research">
+        <h2 class="section-title">Research & Discovery</h2>
+        <div class="case-contents">
+          <h3><strong>Design System Audit</strong></h3>
+          <p class="case-body">I started by leading a comprehensive audit of our existing design system and CMS components, cataloging:</p>
+          <ul class="case-body">
+            <li>100+ CMS and marketing modules with varying levels of usage and overlap</li>
+            <li>Inconsistent typography implementations (including incorrect fonts and >25 different font sizes)</li>
+            <li>Color values hard-coded in 30+ locations, many of which were incorrect shades</li>
+            <li>Components built without accessibility considerations</li>
+          </ul>
+
+          <h3><strong>Proto-Design System Review</strong></h3>
+          <p class="case-body">I catalogued all of our design tokens and components and created a proto-design system to work off of, which I pared down with the help of the visuals team. <br>
+            <br>In this process, we identified and eliminated 20+ redundant or unnecessary design tokens and variables, and assigned the remaining to variables in the CSS. </p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Strategy">
+        <h2 class="section-title">Design Strategy</h2>
+        <div class="case-contents">
+          <p class="case-body">Working with the product team, we planned a systematic, module-by-module migration that would allow editorial teams to continue publishing without interruption and enable thorough testing of each component before widespread deployment.</p>
+          <h3><strong>Foundation First Approach</strong></h3>
+          <p class="case-body">Working closely with engineering, I established the groundwork by creating a design system that restructured color, typography, spacing, and other foundational styles. This was documented in Figma and implemented as reusable variables in LESS. I created clear naming conventions that bridged designer and developer language and built flexibility for future theme variations.</p>
+
+          <p class="case-body">After variables were established, we moved on to modules. These fell into three groups:</p>
+            <ul class="case-body">
+            <li>Existing modules that only needed a light touch and QA review to ensure they were consistent with our new variables</li>
+            <li>Existing modules that needed redesign and a visual update</li>
+            <li>Existing modules that needed to be rebuilt almost completely</li>
+            <li>New modules to the base theme that we needed to design and adapt for our uses</li>
+          </ul>
+
+          <div class="slider-container case-contents tall-slider">
+            <div class="slider">
+              <img src="/images/chronicle/modules-before.png" class="before" alt="Screenshots of three different modules showing their original designs">
+              <img src="/images/chronicle/modules-after-1.png" class="after" alt="Screenshots of three different modules showing their post-Frost designs">
+              <div class="slider-handle"></div>
+            </div>
+          </div>
+          <p class="caption-below">The before and after of some key modules that were redesigned.</p>
+
+          <p class="case-body">We tackled these modules roughly in order of most-used to least, leaving some that were not yet in use for post-launch.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Rebrand">
+        <h2 class="section-title">The Plot Twist: Mid-Project Rebrand</h2>
+        <div class="case-contents">
+          <p class="case-body">Halfway through the migration, The Chronicle introduced new brand guidelines. This could have derailed the project, but our systematic approach proved its value.</p>
+
+          <p class="case-body">I quickly audited which completed work needed revision, worked with the engineering team to restructure our LESS variables to accommodate the new brand system, re-prioritized the component queue based on brand visibility, and led design workshops with stakeholders and our UX Director to align on how the new brand should translate to digital.</p>
+
+          <p class="case-body">The early investment in a proper design system meant we could propagate brand changes across dozens of components in a fraction of the time the old system would have required. <strong>This validated our technical approach and became proof-of-concept for leadership that the redesign was worth the investment.</strong></p>
+        </div>
+      </div>
+
+      <div class="case-section" id="QA">
+        <h2 class="section-title">Design QA Standards</h2>
+        <div class="case-contents">
+          <p class="case-body">To ensure consistency across the redesign, I developed comprehensive Design QA documentation used company-wide. This guide covered color usage and accessibility requirements, typography specifications and hierarchy rules, spacing and layout grid systems, component states and interactive behavior, and responsive breakpoint standards.</p>
+
+          <img class="myImg" src="/images/chronicle/colors-1.png" alt="Figma screenshot that shows the color section of the new design system, displaying colors, values, usage guidelines, and associated variables">
+          <div class="myModal modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" src="/images/chronicle/colors-1.png">
+            <div class="modal-caption">The colors page from the Design QA guide.</div>
+          </div>
+          <p class="caption-below">The colors page from the Design QA guide </p>
+        
+          <p class="case-body"> The Design QA guide became the source of truth for designers, developers, editorial staff, and the marketing team - really, anyone who touched our digital products.</p>
+          <p class="case-body"> This greatly minimized the design and visual errors across the company's digital products, and gave back hours of time weekly to the UX team. </p>
+          
+        </div>
+      </div>
+
+      <div class="case-section" id="Implementation">
+        <h2 class="section-title">Implementation & Training</h2>
+        <div class="case-contents">
+          <h3><strong>Phased Rollout</strong></h3>
+          <p class="case-body">I worked with engineering to migrate and test components in strategic phases:</p>
+          <ol class="case-body">
+            <li><strong>Homepage modules</strong> (highest visibility, user testing ground)</li>
+            <li><strong>Article templates</strong> (core reading experience)</li>
+            <li><strong>Section pages</strong> (editorial flexibility)</li>
+            <li><strong>Specialized tools</strong> (data visualizations, multimedia)</li>
+          </ol>
+
+          <h3><strong>Cross-Functional Training</strong></h3>
+          <p class="case-body">I led multiple training sessions across departments, showing editorial teams new CMS capabilities and layout options, training section editors on brand application and standards, and creating quick-reference guides for common publishing scenarios.</p>
+
+          <div class="slider-container case-contents">
+            <div class="slider">
+              <img src="/images/chronicle/chron-frost-before.png" class="before" alt="Before screenshots of CMS modules">
+              <img src="/images/chronicle/chron-frost-after-1.png" class="after" alt="After screenshots of redesigned CMS modules">
+              <div class="slider-handle"></div>
+            </div>
+          </div>
+          <p class="caption-below">A before and after view of three redesigned CMS modules.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Result">
+        <h2 class="section-title">The Result</h2>
+        <div class="case-contents">
+          <p class="case-body">The redesigned Chronicle.com launched with a modern, cohesive visual system that better serves both our readers and editorial teams.</p>
+
+          <p class="case-body"><strong>What changed:</strong></p>
+          <ul class="case-body">
+            <li><strong>Unified user experience</strong> with consistent typography, spacing, and component behavior across all page types</li>
+            <li><strong>Streamlined CMS</strong> with consolidated, reusable modules that reduced editorial confusion</li>
+            <li><strong>Flexible design system</strong> that enabled rapid implementation of new brand guidelines mid-project</li>
+            <li><strong>Scalable foundation</strong> that reduced development time for new features and eliminated the technical debt that had accumulated over years</li>
+          </ul>
+
+          <p class="case-body"><strong>Qualitative feedback:</strong><br>
+          Editorial teams reported smoother publishing workflows and more layout flexibility. The development team noted faster implementation times for new features. Leadership praised the visual refresh as elevating Chronicle's brand presence. The design system became a model for other internal products.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Learned">
+        <h2 class="section-title">What I Learned</h2>
+        <div class="case-contents">
+          <p class="case-body"><strong>Start with the foundation.</strong> Investing time upfront in design tokens and system architecture paid massive dividends when requirements changed mid-project.</p>
+
+          <p class="case-body"><strong>Incremental beats revolutionary.</strong> The phased approach maintained team morale and allowed us to course-correct based on real feedback rather than theoretical assumptions.</p>
+
+          <p class="case-body"><strong>Documentation is design work.</strong> The Design QA guide became as valuable as the visual designs themselves, enabling consistency at scale.</p>
+
+          <p class="case-body"><strong>Collaboration requires translation.</strong> My role wasn't just designing components—it was bridging the language between editorial needs, business goals, and technical constraints to create a system that worked for everyone.</p>
+        </div>
+      </div>
+
+      <!--Below section-->   
+      <div class="case-section below-nav">
+        <h2 class="section-title">more work</h2>
+        <div class="more-cards">
+
+          <div class="case-card horizontal-card"> 
+            <a href="/pages/chronicle.html">
+              <img src="/images/chronicle/chronicle.com-cover-img-1.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>chronicle.com</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">designing and improving digital products for higher education journalism hub The Chronicle of Higher Education</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="case-card horizontal-card">
+            <a href="/pages/lostcanyon.html">
+              <img src="/images/lostcanyoncard.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>lost canyon imports</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">a sustainable ecommerce site focused on endangered traditional crafts and the communities that make them</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="case-card horizontal-card"> 
+            <a href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9" target="_blank">
+              <img src="/images/amazonnikecard.png" class="card-img-small">
+              <div class="case-description-wrapper">
+                <div class="home-case-title">
+                  <h2>amazon v. nike</h2>
+                  <div class="arrow">→</div>
+                </div>
+                <p class="case-desc">keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)</p>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+      </div>  
+
+    </div>  
+
+    <!--Footer-->
+    <div class="footer-container">
+      <footer>
+        <div class="footer-left">
+          <a href="/" class="logo">TR</a>
+          <div class="footer-email">triemers12@gmail.com</div>
+        </div>
+        
+        <nav class="footer-nav">
+          <a href="/pages/about.html" class="footer-link">about</a>
+          <a href="/files/ResumeLong.pdf" class="footer-link">resume</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="/scripts/header.js"></script>
+    <script src="/scripts/scripts.js"></script>
+  </body>
+</html>

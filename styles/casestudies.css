@@ -45,7 +45,7 @@ li {
 
 .case-contents {
     margin: 10px 0px;
-    width: 70%;
+    width: 700px;
     flex-grow: 1;
 }
 
@@ -245,9 +245,11 @@ p.caption-below {
     align-self: flex-start;
 }
 
+
 .contents-items-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 700px;
     margin-top: 16px;
 }
@@ -262,6 +264,7 @@ p.caption-below {
     gap: 16px;
     padding: 4px 0;
     min-height: 24px; 
+    font-size: var(--fontSizeS);
 }
 
 .contents-link:hover {

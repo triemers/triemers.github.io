@@ -58,6 +58,7 @@
     display: inline-flex;
     align-items: center;
     column-gap: 16px;
+    max-width: 600px;
 }
 
 .arrow {

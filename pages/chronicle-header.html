@@ -112,9 +112,10 @@
 
           <p class="case-body"><strong>Key insights:</strong></p>
           <ul class="case-body">
-            <li>Users navigating from the homepage had different needs than those landing on article pages from search or social media</li>
+            <li>Users navigating from the homepage had different needs than those landing on article pages from search, email, or social media - leading to drops in recirculation</li>
             <li>Certain header elements had high visibility but low click-through, suggesting they were creating visual noise without adding value</li>
             <li>Mobile users showed clear preference for streamlined navigation, often bypassing header elements entirely to scroll to content</li>
+            <li>Multiple elements that we assumed were effective were actually performing poorly, leaving the door open for us to think about different ways to accomplish the goals of those components</li>
           </ul>
 
           <h3>Initial Design Direction</h3>
@@ -161,13 +162,12 @@
           <h3><strong>Core Header + Slim Header Architecture</strong></h3>
           <p class="case-body">The system consists of two states:</p>
 
-          <p class="case-body"><strong>The Core Header</strong> appears at the top of pages when users first land, providing full navigation context and key actions. It includes all primary navigation elements, search, account access, and any page-specific tools.</p>
+          <p class="case-body"><strong>The Core Header:</strong> Appears at the top of pages when users first land, providing full navigation context and key actions. It includes all primary navigation elements, search, account access, and any page-specific tools.</p>
 
-          <p class="case-body"><strong>The Slim Header</strong> replaces the core header on scroll, becoming a sticky navigation bar that stays with users as they read or interact with content. This slim version maintains essential navigation while minimizing screen real estate, and crucially, it's customizable for each page type.</p>
+          <p class="case-body"><strong>The Slim Header:</strong> Replaces the core header on scroll, becoming a sticky navigation bar that stays with users as they read or interact with content. This slim version maintains essential navigation while minimizing screen real estate, and crucially, it's customizable for each page type.</p>
 
           <p class="case-body">This two-header approach means:</p>
           <ul class="case-body">
-            <li>Users get full context when they arrive on a page</li>
             <li>Navigation doesn't disappear or take up valuable reading space once they start engaging with content</li>
             <li>Each page type can feature different options in the slim header based on what users need in that context</li>
             <li>We can A/B test different slim header configurations without rebuilding the entire header</li>
@@ -184,10 +184,9 @@
           <h3><strong>Customization for Page Context</strong></h3>
           <p class="case-body">The slim header adapts based on page type:</p>
           <ul class="case-body">
-            <li><strong>Article pages:</strong> Feature sharing tools, save functionality, and related content navigation</li>
-            <li><strong>Data tools:</strong> Prioritize filter controls and export options</li>
-            <li><strong>Section pages:</strong> Emphasize topic navigation and newsletter signup</li>
-            <li><strong>Homepage:</strong> Focus on search and section browsing</li>
+            <li><strong>Article pages:</strong> Feature sharing tools and related content navigation</li>
+            <li><strong>Account and workflow pages:</strong> Communicate's reader relationshipa and provides account options</li>
+            <li><strong>Homepage and default:</strong> Content promotion and account access</li>
           </ul>
 
           <p class="case-body">This flexibility means users always have relevant tools at hand without cluttering the interface with options they won't use in that context.</p>
@@ -198,12 +197,12 @@
             <img class="modal-content" src="/images/chronicle/high-fidelity-system-samples.png">
             <div class="modal-caption">High-fidelity mockups of various header states, such as scrolled, unscrolled, and on different page types.</div>
           </div>
-          <p class="caption-below">High-fidelity mockups of various header states, such as scrolled, unscrolled, and on different page types.</p>
+          <p class="caption-below">High-fidelity mockups of various header states, such as top/unscrolled, scrolled, and on different page types.</p>
         </div>
       </div>
 
       <div class="case-section" id="Mobile">
-        <h2 class="section-title">Mobile Simplification</h2>
+        <h2 class="section-title">Mobile Version</h2>
         <div class="case-contents">
           <p class="case-body">Mobile required a different approach. With limited screen real estate and user feedback consistently requesting a cleaner reading experience, I prioritized simplicity over feature parity with desktop.</p>
 
@@ -212,7 +211,6 @@
             <li>Streamlined navigation menu with only essential top-level categories</li>
             <li>Prioritized search and account access as primary actions</li>
             <li>Minimal sticky header that appears on scroll-up only (disappears on scroll-down to maximize reading space)</li>
-            <li>Context-specific quick actions available through a contextual menu rather than persistent header elements</li>
           </ul>
 
           <p class="case-body">This approach respected the mobile reading experience while ensuring users could still access core functionality when needed. Testing showed that mobile users preferred this lightweight approach and were able to find navigation options when they needed them without feeling overwhelmed by options when they didn't.</p>
@@ -238,11 +236,11 @@
             <li><strong>Improved stakeholder alignment</strong> through the workshop process, making future header changes easier to implement with buy-in</li>
             <li><strong>Cleaner mobile experience</strong> that respects reading flow while maintaining navigation accessibility</li>
             <li><strong>Foundation for navigation system rework</strong> that informed broader site architecture improvements</li>
-            <li><strong>Scalable approach</strong> that the small dev team can maintain and iterate on without constant designer involvement</li>
+            <li><strong>More recirculation opportunities</strong> to show more relevant content to keep users engaged and informed</li>
           </ul>
 
-          <p class="case-body"><strong>Impact:</strong><br>
-          The header system proved its value by enabling rapid experimentation with different slim header configurations for A/B testing. The engineering team noted that adding new page-specific header variations became significantly easier. Most importantly, the system laid groundwork for a complete navigation architecture overhaul that's currently in progress.</p>
+          <p class="case-body"><strong>Impact:</strong>
+          The header system proved its value by enabling rapid experimentation with different slim header configurations for A/B testing. Most importantly, the system laid groundwork for a complete navigation architecture overhaul that's currently in progress.</p>
         </div>
       </div>
 

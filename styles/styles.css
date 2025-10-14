@@ -4,7 +4,7 @@
     --bgColor: #f2f2f2;
     --primaryTextColor: #333333;
     --black: #333333;
-    --border: 1px solid #333333;
+    --border: 1px solid #cecdcd;
     --fontSizeXL: 2.6rem; /* h1,  */
     --fontSizeL: 1.75rem; /* 28px, subheaders */
     --fontSizeM: 1.25rem; /* 20px descriptions */
@@ -118,7 +118,7 @@ h3 {
 /* footer */
 
  footer {
-            border-top: 1px solid var(--black);
+            border-top: var(--border);
             width: 100%;     
         }
 

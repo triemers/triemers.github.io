@@ -60,6 +60,7 @@ li {
 
 p.caption-below {
     font-size: var(--fontSizeXS);
+    display: block;
 }
 
 /* image modal */

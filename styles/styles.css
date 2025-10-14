@@ -124,7 +124,7 @@ h3 {
 
 .footer-email {
             margin-left: 20px;
-            font-size: 16px;
+            font-size: var(--fontSizeS);
             color: var(--black);
         }
 
@@ -139,7 +139,7 @@ h3 {
     .header-container, .footer-container {
         max-width: 100%;
         margin: 0px;
-        padding: 0px 20px;
+        padding: 0px 10px;
     }
 
     .header-container {
@@ -194,13 +194,13 @@ h3 {
 
     footer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
     }
     .footer-nav {
-        gap: 20px;
+        gap: 60px;
     }
 }

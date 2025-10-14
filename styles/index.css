@@ -37,6 +37,11 @@
     opacity: 0.5;
 }
 
+p.case-desc {
+    margin: 0;
+    max-width: 90%;
+}
+
 /* Arrow hover animation */
 .home-case-title {
     display: flex;

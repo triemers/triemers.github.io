@@ -339,41 +339,8 @@ p.caption-below {
     transition-delay: 100ms;
 }
 /*about page specific styles */
-.about-lead-sub {
-        display: flex;
-        flex-direction: row;
-        gap: 10px 60px;
-        margin-bottom: 20px;
-        width: 100%;
-}
 
-.about-subhead {
-    max-width: 700px;
-    font-weight: 400;
-    font-size: var(--fontSizeM);
-}
 
-.about-img-container {
-    width: 30%;
-}
-
-.about-lead-img {
-    width: auto;
-    height: 300px;
-    display: block;
-    margin: auto;
-}
-
-.gallery {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.gallery > img {
-    width: 30%;
-    height: auto;
-}
 /*responsiveness*/
 
 @media screen and (max-width: 768px) {

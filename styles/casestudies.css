@@ -6,7 +6,7 @@
     font-weight: 700;
     max-width: 60%;
     line-height: 1.2;
-    margin-top: 0;
+    margin: 20px 0px;
 }
 
 .case-subhead {
@@ -20,16 +20,16 @@ li {
     max-width: 700px;
 }
 
-/* ============================================
+/*
    LAYOUT
-   ============================================ */
+ */
 .case-study-wrapper {
     display: flex;
     flex-direction: column;
     margin: 60px;
 }
 
-/* Lead block - now matches case-section structure */
+/* Lead block - matches case-section structure */
 .lead-block {
     display: flex;
     flex-direction: row;
@@ -68,7 +68,7 @@ li {
 
 .section-title {
     text-transform: none;
-    margin-top: 16px;
+    margin: 20px 0px;
     margin-bottom: 0;
     line-height: 1.4;
     padding: 8px 0;
@@ -100,6 +100,7 @@ li {
     display: flex;
     flex-direction: column;
     max-width: 700px;
+    margin: 20px 0;
 }
 
 .case-roles {
@@ -202,6 +203,7 @@ li {
 p.caption-below {
     font-size: var(--fontSizeXS);
     display: block;
+    margin: 10px 0;
 }
 
 /* Image Modal */

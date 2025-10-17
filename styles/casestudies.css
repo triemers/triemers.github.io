@@ -63,7 +63,7 @@ li {
 }
 
 .contents-section {
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
 .section-title {
@@ -124,7 +124,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 16px 0;
+    margin: 20px 0;
 }
 
 .contents-item {

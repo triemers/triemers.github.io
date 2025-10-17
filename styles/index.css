@@ -80,7 +80,7 @@
     transition: transform 300ms 150ms;
     display: inline-block;
     flex-shrink: 0;
-    margin-left: 16px;
+    margin-left: 10px;
     white-space: nowrap;
 }
 
@@ -100,7 +100,7 @@
 .resume-link {
     display: inline-flex;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 10px;
     transition: text-decoration 300ms 150ms;
 }
 

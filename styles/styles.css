@@ -3,6 +3,7 @@
     --fontFamily: 'Helvetica', sans-serif;
     --bgColor: #f2f2f2;
     --primaryTextColor: #333333;
+    --secondaryTextColor: #666666;
     --linkTextColor: #734F96;
     --black: #333333;
     --border: 1px solid #cecdcd;
@@ -10,7 +11,8 @@
     --fontSizeL: 1.75rem; /* 28px, subheaders */
     --fontSizeM: 1.25rem; /* 20px descriptions */
     --fontSizeS: 1.125rem; /* 16px contents, body, nav */
-    --fontSizeXS: .75rem; /* 12px captions */
+    --fontSizeXS: 14px;
+    --fontSizeXXS: .75rem; /* 12px captions */
     --borderRadius: 0px;
 }
 

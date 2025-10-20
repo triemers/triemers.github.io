@@ -17,7 +17,7 @@ li {
     font-family: var(--fontFamily);
     font-size: var(--fontSizeS);
     line-height: 1.4;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 /*
@@ -46,7 +46,7 @@ li {
 .lead-img {
     display: block;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     height: auto;
     margin: 20px 0;
     object-fit: contain;
@@ -55,7 +55,7 @@ li {
 /* Contents sidebar - shared styles */
 .contents-section,
 .section-title {
-    width: 30%;
+    width: 25%;
     margin-right: 40px;
     position: sticky;
     top: 20px;
@@ -92,14 +92,14 @@ li {
 
 .case-contents > h3:not(:first-of-type) {
     border-top: var(--border);
-    max-width: 700px;
+    max-width: 800px;
     padding-top: 20px;
 }
 
 .case-body {
     display: flex;
     flex-direction: column;
-    max-width: 700px;
+    max-width: 800px;
     margin: 20px 0;
 }
 
@@ -107,7 +107,7 @@ li {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    max-width: 700px;
+    max-width: 800px;
     justify-content: space-between;
 }
 
@@ -165,7 +165,7 @@ li {
     gap: 20px;
     margin: 20px 0;
     align-items: flex-start;
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .case-description-wrapper {
@@ -212,7 +212,7 @@ p.caption-below {
     cursor: pointer;
     transition: opacity 0.3s;
     max-height: 600px;
-    max-width: 700px;
+    max-width: 800px;
     width: auto;
 }
 
@@ -246,7 +246,7 @@ p.caption-below {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     color: #ccc;
     padding: 10px 0;
@@ -282,7 +282,7 @@ p.caption-below {
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     overflow: hidden;
     border: 1px solid #333;
     border-radius: 0;

@@ -50,6 +50,7 @@ li {
     height: auto;
     margin: 20px 0;
     object-fit: contain;
+    border-radius: 20px;
 }
 
 /* Contents sidebar - shared styles */
@@ -193,10 +194,12 @@ li {
     max-height: 150px;
     width: auto;
     transition: opacity 0.3s 100ms;
+    border-radius: 10px;
 }
 
 .card-img-small:hover {
     opacity: 0.5;
+    border-radius: 10px;
 }
 
 /* IMAGES */
@@ -214,6 +217,7 @@ p.caption-below {
     max-height: 600px;
     max-width: 800px;
     width: auto;
+    border-radius: 10px;
 }
 
 .myImg:hover {
@@ -240,6 +244,7 @@ p.caption-below {
     width: 80%;
     cursor: auto;
     animation: zoom 0.6s;
+    border-radius: 10px;
 }
 
 .modal-caption {
@@ -282,31 +287,36 @@ p.caption-below {
 .slider-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     overflow: hidden;
-    border: 1px solid #333;
-    border-radius: 0;
-    height: 400px;
+    border: 1px solid #fff;
+    border-radius: 10px;
     align-self: flex-start;
-}
-
-.tall-slider {
-    height: 980px;
 }
 
 .slider {
     position: relative;
     width: 100%;
-    height: 100%;
 }
 
 .slider img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.slider .before {
+    position: relative;
+    z-index: 2;
+    clip-path: inset(0 50% 0 0);
+}
+
+.slider .after {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    z-index: 1;
     pointer-events: none;
 }
 

@@ -49,6 +49,7 @@
     width: 100%;
     height: auto;
     transition: opacity 0.3s ease-in-out 100ms;
+    border-radius: 20px;
 }
 
 .card-img:hover {

@@ -11,6 +11,7 @@
 
 .case-subhead {
     max-width: 800px;
+    font-weight: 400;
 }
 
 li {
@@ -372,10 +373,6 @@ p.caption-below {
 
     .case-title {
         max-width: 100%;
-    }
-
-    .case-subhead {
-        font-weight: 400;
     }
 
     /* Stack sidebar and content vertically */

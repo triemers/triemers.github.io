@@ -93,3 +93,21 @@ document.querySelectorAll('.slider-container').forEach((slider) => {
     });
 });
 
+//Paragraph load in - need to bring in piece by piece, maybe iterate based on child elements? 
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all elements that should animate
+document.querySelectorAll('.case-body, .myImg, .card-img, .slider-container').forEach(el => {
+    observer.observe(el);
+});

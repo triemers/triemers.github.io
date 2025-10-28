@@ -10,7 +10,7 @@
     --fontSizeXL: 3.75rem; /* h1, 60px */
     --fontSizeL: 1.75rem; /* 28px, subheaders */
     --fontSizeM: 1.25rem; /* 20px descriptions */
-    --fontSizeS: 1.125rem; /* 16px contents, body, nav */
+    --fontSizeS: 1.125rem; /* 18px contents, body, nav */
     --fontSizeXS: 14px;
     --fontSizeXXS: .75rem; /* 12px captions */
     --borderRadius: 0px;
@@ -35,7 +35,7 @@ body {
 .description {
     font-family: var(--fontFamily);
     color: var(--primaryTextColor);
-    font-size: var(--fontSizeM);
+    font-size: var(--fontSizeS);
 }
 
 p, h1, h2, li {

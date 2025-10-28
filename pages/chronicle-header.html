@@ -106,47 +106,46 @@
 
           <p class="case-body"><strong>Key problems:</strong></p>
           <ul class="case-body">
-            <li><strong>Context-blind navigation:</strong> The header didn't adapt to help users accomplish different goals on different page types</li>
             <li><strong>Competing priorities:</strong> Stakeholders across departments had different ideas about what should be prominent in the header</li>
-            <li><strong>Scalability concerns:</strong> Adding new features or page types required custom header modifications rather than working within a flexible system</li>
-            <li><strong>Mobile experience:</strong> The desktop-first approach created a cluttered, overwhelming mobile navigation with some accessibility issues</li>
+            <li><strong>Scalability concerns:</strong> Adding new features or promotions required custom header modifications</li>
+            <li><strong>Mobile experience:</strong> The mobile experience had several accessibility issues and was difficult to navigate</li>
           </ul>
 
-          <p class="case-body">The goal was to design a header system (not just a header) that could get users where they wanted to go, while balancing business priorities.</p>
+          <p class="case-body">The goal was to design a header system (not just a header) that could get users where they wanted to go, while balancing business priorities and fixing key accessibility and usability issues.</p>
         </div>
       </div>
 
       <div class="case-section" id="Research">
         <h2 class="section-title">Research & Analysis</h2>
         <div class="case-contents">
-          <h3>Analytics Deep Dive</h3>
-          <p class="case-body">I started by analyzing user behavior in Adobe Analytics to understand how people actually navigated the site and used the existing header. This revealed patterns in navigation flows, common entry and exit points, and which header elements were being clicked (or ignored) on different page types.</p>
+          <h3>Quant Analysis</h3>
+          <p class="case-body">I started by analyzing user behavior in Adobe Analytics to understand how people actually navigated the site and used the existing header. This revealed patterns in navigation flows, common entry and exit points, and which header elements were being clicked (or ignored) on different page types (smashing some previous assumptions).</p>
 
           <p class="case-body"><strong>Key insights:</strong></p>
           <ul class="case-body">
             <li>Users navigating from the homepage had different needs than those landing on article pages from search, email, or social media - leading to drops in recirculation</li>
             <li>Certain header elements had high visibility but low click-through, suggesting they were creating visual noise without adding value</li>
-            <li>Mobile users showed clear preference for streamlined navigation, often bypassing header elements entirely to scroll to content</li>
+            <li>Mobile users often bypassed header elements entirely to get to the content quicker</li>
             <li>Multiple elements that we assumed were effective were actually performing poorly, leaving the door open for us to think about different ways to accomplish the goals of those components</li>
           </ul>
 
           <h3>Initial Design Direction</h3>
           <p class="case-body">Based on this research, we settled on a design direction and began development. However, midway through implementation, The Chronicle introduced new branding guidelines that fundamentally changed our visual language and provided justification for starting the project from square one.</p>
 
-          <p class="case-body">Rather than viewing this as a setback, I saw it as an opportunity to involve stakeholders more deeply and build stronger alignment from the ground up.</p>
+          <p class="case-body">Rather than viewing this as a setback, I saw it as an opportunity to involve stakeholders more deeply, build stronger alignment from the ground up, and really define our scope and goals.</p>
         </div>
       </div>
 
       <div class="case-section" id="Restart">
         <h2 class="section-title">Stakeholder Workshops</h2>
         <div class="case-contents">
-          <p class="case-body">The rebrand gave me the chance to conduct design workshops with key business stakeholders and C-suite executives before jumping into solutions. These workshops were structured to focus exclusively on analysis, goals, and priorities—stakeholders were explicitly discouraged from proposing solutions or debating design details.</p>
+          <p class="case-body">The rebrand gave me the chance to conduct design workshops with key business stakeholders and C-suite executives before jumping into solutions. I led sessions that were structured to focus exclusively on analysis, goals, and priorities. Stakeholders were explicitly discouraged from proposing solutions or debating design details.</p>
 
           <h3>Workshop Structure</h3>
-          <p class="case-body">Over a series of sessions, I facilitated exercises that helped stakeholders:</p>
+          <p class="case-body">Over three sessions, I facilitated exercises that helped stakeholders:</p>
           <ul class="case-body">
             <li>Articulate their department's goals for the header without prescribing solutions</li>
-            <li>Prioritize competing objectives through voting and discussion</li>
+            <li>Prioritize competing objectives through ranked voting and discussion</li>
             <li>Identify user scenarios where the header needed to serve different needs</li>
             <li>Define success metrics that would guide design decisions</li>
           </ul>
@@ -160,7 +159,7 @@
           <p class="caption-below">Figjam showing the process of the stakeholder design workshops.</p>
 
           <h3>Workshop Outcomes</h3>
-          <p class="case-body">We emerged from these workshops with firm requirements, clear scope, and most importantly, a prioritized list of goals that everyone had agreed upon. This alignment proved invaluable later when making difficult trade-off decisions during the design process.</p>
+          <p class="case-body">We emerged from these workshops with firm requirements, clear scope, and most importantly, a prioritized list of goals that everyone had agreed upon. This alignment proved invaluable later when making difficult trade-off decisions during the design process and helped avoid scope creep.</p>
 
           <p class="case-body">The workshops also revealed something crucial: different page types needed different header configurations. A reader browsing the homepage had different navigation needs than someone reading an in-depth article or using a data tool.</p>
         </div>
@@ -169,14 +168,15 @@
       <div class="case-section" id="Solution">
         <h2 class="section-title">The Solution: A Responsive Header System</h2>
         <div class="case-contents">
-          <p class="case-body">Rather than designing a single header, I designed a flexible header system with two core components that work together to serve users' needs on each page type.</p>
 
           <h3><strong>Core Header + Slim Header Architecture</strong></h3>
+
+          <p class="case-body">Rather than designing a single header, I designed a flexible header system with two core components that work together to serve users' needs on each page type.</p>
           <p class="case-body">The system consists of two states:</p>
 
-          <p class="case-body"><strong>The Core Header:</strong> Appears at the top of pages when users first land, providing full navigation context and key actions. It includes all primary navigation elements, search, account access, and any page-specific tools.</p>
+          <p class="case-body"><strong>The Core Header:</strong> Appears at the top of pages when users first land, providing full navigation context and key actions. It includes all primary navigation elements, search, reader relationship, and account access.</p>
 
-          <p class="case-body"><strong>The Slim Header:</strong> Replaces the core header on scroll, becoming a sticky navigation bar that stays with users as they read or interact with content. This slim version maintains essential navigation while minimizing screen real estate, and crucially, it's customizable for each page type.</p>
+          <p class="case-body"><strong>The Slim Header:</strong> Replaces the core header on scroll, becoming a sticky navigation bar that stays with users as they read or interact with content. This slim version maintains essential navigation while minimizing screen real estate and can provide page-specific options such as recirculation or social sharing.</p>
 
           <p class="case-body">This two-header approach means:</p>
           <ul class="case-body">

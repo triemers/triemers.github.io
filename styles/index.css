@@ -8,13 +8,21 @@
 }
 
 /* Home title */
-.home-title {
+.intro-section {
     grid-column: 1 / span 2;
     grid-row-start: 2;
+}
+
+.home-title {
     font-family: var(--fontFamily);
     color: var(--primaryTextColor);
     font-size: var(--fontSizeXL);
     line-height: 1.2;
+}
+
+.intro-subhead {
+    font-size: var(--fontSizeM);
+    max-width: 800px;
 }
 
 /* Case cards 

@@ -142,6 +142,11 @@ li {
 /* 
    CONTENTS NAVIGATION
  */
+
+ .contents-title {
+    position: static;
+ }
+
 .contents-items-wrapper {
     display: flex;
     flex-direction: column;

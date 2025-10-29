@@ -1,4 +1,23 @@
 
+//home name/role animation
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Find all bold elements you want to animate
+    const boldElements = document.querySelectorAll('.home-title strong');
+    
+    boldElements.forEach((element, index) => {
+        // Get the text content
+        const text = element.textContent;
+        
+        //data attribute, class
+        element.setAttribute('data-text', text);
+        element.classList.add('text-reveal');
+        
+        //stagger delay based on index
+        element.style.setProperty('--stagger-delay', `${index * .8}s`);
+    });
+});
+
 console.log('Script loaded! Number of images:', document.querySelectorAll('.myImg').length);
 
 //IMAGE MODALS -- it works now 

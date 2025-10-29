@@ -25,7 +25,7 @@
     max-width: 800px;
 }
 
-/* text reveal stuff*/
+/* text reveal stuff
 .text-reveal {
     color: #999;
     display: inline-block;
@@ -71,8 +71,8 @@
         max-height: 100%;
     }
 }
-
-/* Respect reduced motion preferences */
+*/
+/* Respect reduced motion preferences 
 @media (prefers-reduced-motion) {
     .text-reveal {
         color: var(--primaryTextColor, #303952);
@@ -83,7 +83,7 @@
         content: "";
     }
 }
-
+*/
 /*case cards*/
 .case-wrapper-4 {
     grid-row-start: 4;

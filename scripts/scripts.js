@@ -1,22 +1,22 @@
 
-//home name/role animation
+//home name/role animation - I don't love this but leaving it in because it was tough
 
-document.addEventListener('DOMContentLoaded', () => {
+//document.addEventListener('DOMContentLoaded', () => {
     // Find all bold elements you want to animate
-    const boldElements = document.querySelectorAll('.home-title strong');
+    //const boldElements = document.querySelectorAll('.home-title strong');
     
-    boldElements.forEach((element, index) => {
+    //boldElements.forEach((element, index) => {
         // Get the text content
-        const text = element.textContent;
+        //const text = element.textContent;
         
         //data attribute, class
-        element.setAttribute('data-text', text);
-        element.classList.add('text-reveal');
+        //element.setAttribute('data-text', text);
+        //element.classList.add('text-reveal');
         
         //stagger delay based on index
-        element.style.setProperty('--stagger-delay', `${index * .8}s`);
-    });
-});
+        //element.style.setProperty('--stagger-delay', `${index * .8}s`);
+    //});
+//});
 
 console.log('Script loaded! Number of images:', document.querySelectorAll('.myImg').length);
 

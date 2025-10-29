@@ -112,10 +112,10 @@ document.querySelectorAll('.slider-container').forEach((slider) => {
     });
 });
 
-//Paragraph load in - need to bring in piece by piece, maybe iterate based on child elements? 
+//Paragraph load in - need to bring in piece by piece, iterate based on child elements? 
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -60px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {

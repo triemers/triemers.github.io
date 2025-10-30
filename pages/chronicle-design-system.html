@@ -107,17 +107,17 @@
       <div class="case-section" id="Challenge">
         <h2 class="section-title">The Challenge</h2>
         <div class="case-contents">
-          <p class="case-body">Chronicle.com's CMS had evolved organically over years, accumulating significant design and technical debt. Editorial teams were frustrated with inconsistent components, limited functionality, and a dated visual appearance that no longer reflected the publication's authority in higher education journalism.</p>
+          <p class="case-body">Chronicle.com's CMS had evolved organically over years, accumulating significant design and technical debt. Editorial teams were frustrated with inconsistent components, limited functionality, and a dated UI that no longer reflected Chronicle's authority in higher education journalism.</p>
           
           <p class="case-body"><strong>Key problems we identified:</strong></p>
           <ul class="case-body">
-            <li><strong>Inconsistent user experience:</strong> Components had inconsistent UI and accessibility issues, confusing readers and diluting brand trust</li>
+            <li><strong>Inconsistent user experience:</strong> Components had inconsistent UI and accessibility issues, confusing readers and diluting trust</li>
             <li><strong>Editorial team friction:</strong> Editorial and visuals staff had to work around CMS limitations and wished for more flexibility in how they told stories</li>
             <li><strong>Mounting technical debt:</strong> Lots of one-off CSS overrides, inconsistent variables and properties applied across the site, along with improperly built modules</li>
             <li><strong>Visual stagnation:</strong> The site's appearance hadn't evolved with modern web standards, impacting perceived credibility</li>
           </ul>
 
-          <p class="case-body">The business need was clear: modernize the platform without disrupting daily publishing operations across a newsroom serving thousands of higher education professionals.</p>
+          <p class="case-body">The business need was clear: modernize the platform without disrupting daily publishing operations across a newsroom serving over one million active users.</p>
         
         </div>
       </div>
@@ -126,10 +126,10 @@
         <h2 class="section-title">Research & Discovery</h2>
         <div class="case-contents">
           <h3><strong>Design System Audit</strong></h3>
-          <p class="case-body">I started by leading a comprehensive audit of our existing design system and CMS components, cataloging:</p>
+          <p class="case-body">I started by leading a thorough audit of our existing stylesheets, pages and CMS components, cataloging:</p>
           <ul class="case-body">
             <li>50+ CMS and marketing modules with varying levels of usage and overlap</li>
-            <li>Inconsistent typography implementations (including incorrect fonts and >25 different font sizes)</li>
+            <li>Inconsistent typography (including incorrect font facess and >20 different font sizes)</li>
             <li>Color values hard-coded in 30+ locations, many of which were incorrect shades</li>
             <li>Components built without accessibility considerations</li>
           </ul>
@@ -143,9 +143,10 @@
       <div class="case-section" id="Strategy">
         <h2 class="section-title">Design Strategy</h2>
         <div class="case-contents">
-          <p class="case-body">Working with the product team, we planned a systematic, module-by-module migration that would allow editorial teams to continue publishing without interruption and enable thorough testing of each component before widespread deployment.</p>
+          
           <h3><strong>Foundation First Approach</strong></h3>
-          <p class="case-body">Working closely with engineering, I established the groundwork by creating a design system that restructured color, typography, spacing, and other foundational styles. This was documented in Figma and implemented as reusable variables in LESS. I created clear naming conventions that bridged designer and developer language and built flexibility for future theme variations.</p>
+          <p class="case-body">Working with the product team, we planned a module-by-module migration that would allow editorial teams to continue publishing without interruption and enable thorough testing of each component before deployment.</p>
+          <p class="case-body">With engineering, I established the groundwork by creating a design system that restructured color, typography, spacing, and components. This was documented in Figma and implemented as reusable variables in LESS. We created clear naming conventions that bridged designer and developer language and attached these to the design library items in Figma.</p>
 
           <p class="case-body">After variables were established, we moved on to modules. These fell into three groups:</p>
             <ul class="case-body">
@@ -195,9 +196,9 @@
         <div class="case-contents">
           <p class="case-body">Halfway through the migration, The Chronicle introduced new brand guidelines. This could have derailed the project, but our systematic approach proved its value.</p>
 
-          <p class="case-body">I quickly audited which completed work needed revision, worked with the engineering team to restructure our LESS variables to accommodate the new brand system, re-prioritized the component queue based on brand visibility, and led design workshops with stakeholders and our UX Director to align on how the new brand should translate to digital.</p>
+          <p class="case-body">I audited which completed work needed revision, worked with the engineering team to restructure our variables to accommodate the new brand system, and worked with stakeholders and our UX Director to align on how the new branding should translate to digital.</p>
 
-          <p class="case-body">The early investment in a proper design system meant we could propagate brand changes across dozens of components in a fraction of the time the old system would have required. </p>
+          <p class="case-body">The investment in a proper design system meant we could propagate brand changes across dozens of components in a fraction of the time the old system would have required. </p>
           <p class="case-body"><strong>This validated our technical approach and became proof-of-concept for leadership that the redesign was worth the investment.</strong></p>
         </div>
       </div>
@@ -216,7 +217,7 @@
           <p class="caption-below">The colors page from the Design QA guide </p>
         
           <p class="case-body"> The Design QA guide became the source of truth for designers, developers, editorial staff, and the marketing team - really, anyone who touched our digital products.</p>
-          <p class="case-body"> This greatly minimized the design and visual errors across the company's digital products, and gave back hours of time weekly to the UX team. </p>
+          <p class="case-body"> Having specific guidelines and an easy-to-use reference greatly minimized the design and accessibility errors across the company's digital products, and gave back hours of time weekly to the UX team. </p>
           
         </div>
       </div>
@@ -228,7 +229,7 @@
           <p class="case-body">I worked with engineering to migrate and test components in strategic phases:</p>
           <ol class="case-body">
             <li><strong>Homepage modules</strong> (highest visibility, user testing ground)</li>
-            <li><strong>Global elements</strong> (header, footer, etc.<!---read more <a href=#>here</a>-->)</li>
+            <li><strong>Global elements</strong> (header, footer, etc. - <a href=https://triemers.github.io/pages/chronicle-header.html target="_blank">read more on this project here.</a>)</li>
             <li><strong>Article templates</strong> (core reading experience)</li>
             <li><strong>Section pages</strong> (editorial flexibility)</li>
             <li><strong>Specialized tools</strong> (data visualizations, multimedia, visual tools)</li>

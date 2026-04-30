@@ -37,12 +37,13 @@
 }
 
 .intro-bio {
-  grid-column: 2 / -1;
+  grid-column: 2 / 4;
 }
 
 .intro-role p {
   font-size: var(--fontSizeL);
-  line-height: 1.3;
+  font-weight: bold;
+  line-height: 1.5;
   display: block;
   max-width: none;
   color: var(--primaryTextColor);
@@ -51,7 +52,7 @@
 .intro-bio p {
   font-size: var(--fontSizeS);
   display: block;
-  max-width: 600px;
+  max-width: none;
   color: var(--secondaryTextColor);
 }
 
@@ -180,6 +181,48 @@ case-card:first-child {
 }
 
 /* ── Media queries ───────────────────────────────────────── */
+
+/* 2×2 only — min-width keeps these nth-child rules out of the mobile cascade */
+@media screen and (min-width: 769px) and (max-width: 1240px) {
+  .cases-section {
+    padding: 0;
+  }
+
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* odd = left column: absorb section's left margin, no left border */
+  case-card:nth-child(odd) {
+    border-left: none;
+    padding-left: 60px;
+  }
+
+  /* even = right column: absorb section's right margin */
+  case-card:nth-child(even) {
+    padding-right: 60px;
+  }
+
+  /* row 2: full-width horizontal divider */
+  case-card:nth-child(n+3) {
+    border-top: var(--border);
+  }
+
+  .resume-section {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .resume-item {
+    padding: 32px 60px 60px;
+  }
+
+  .resume-item + .resume-item {
+    border-left: none;
+    border-top: var(--border);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .name-section {
     padding: 24px 20px 20px;
@@ -196,22 +239,33 @@ case-card:first-child {
     padding: 24px 20px;
   }
 
+  .intro-bio {
+    grid-column: 1;
+  }
+
   .intro-role p {
     font-size: var(--fontSizeM);
   }
 
   .cases-section {
-    padding: 0 20px;
+    padding: 0;
   }
 
   .cases-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 20px;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   case-card {
     border-left: none;
-    padding: 0;
+    border-top: var(--border);
+    padding: 24px 20px;
+  }
+
+  /* restore left padding overridden by base case-card:first-child rule */
+  case-card:first-child {
+    border-top: none;
+    padding-left: 20px;
   }
 
   .case-number {
@@ -221,16 +275,15 @@ case-card:first-child {
   .resume-section {
     grid-template-columns: 1fr;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
   }
 
   .resume-item {
-    padding: 24px 0 32px;
-    border-top: var(--border);
+    padding: 24px 20px 32px;
   }
 
   .resume-item + .resume-item {
-    padding-left: 0;
     border-left: none;
+    border-top: var(--border);
   }
 }

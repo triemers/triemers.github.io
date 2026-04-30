@@ -7,24 +7,11 @@
     <link rel="stylesheet" href="/styles/casestudies.css">
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="/components/site-header.js"></script>
+    <script src="/components/site-footer.js"></script>
   </head>
   <body>
-    <div class="header-container">
-      <header>
-          <a href="/" class="logo">🦖 TRUX</a>
-          
-          <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          
-          <nav class="nav-menu">
-              <a href="/pages/about.html" class="nav-link">about</a>
-              <a href="/files/ResumeLong.pdf" class="nav-link" target="_blank">resume</a>
-          </nav>
-      </header>
-    </div>
+    <site-header></site-header>
 
     <div class="case-study-wrapper">
 
@@ -329,22 +316,8 @@
 
     </div>  
 
-    <!--Footer-->
-    <div class="footer-container">
-      <footer>
-        <div class="footer-left">
-          <a href="/" class="logo">🦖 TRUX</a>
-          <div class="footer-email">triemers12@gmail.com</div>
-        </div>
-        
-        <nav class="footer-nav">
-          <a href="/pages/about.html" class="footer-link">About</a>
-          <a href="/files/ResumeLong.pdf" class="footer-link">Resume</a>
-        </nav>
-      </footer>
-    </div>
+    <site-footer></site-footer>
 
-    <script src="/scripts/header.js"></script>
     <script src="/scripts/scripts.js"></script>
   </body>
 </html>

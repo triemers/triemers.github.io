@@ -63,29 +63,33 @@
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0 40px;
+  gap: 0;
   padding: 32px 0 48px;
 }
 
-.case-item {
+case-card {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border-left: var(--border);
-  padding-left: 20px;
+  padding: 0 20px;
+  min-width: 0;
 }
 
-.case-item:first-child {
+case-card:first-child {
   border-left: none;
   padding-left: 0;
 }
 
 .case-number {
   display: block;
+  width: 100%;
   font-size: 4rem;
   color: var(--accentOne);
   font-weight: 400;
   line-height: 1;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 .card-img {
@@ -107,6 +111,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 100%;
 }
 
 .case-link:hover {
@@ -204,7 +209,7 @@
     gap: 32px 20px;
   }
 
-  .case-item {
+  case-card {
     border-left: none;
     padding-left: 0;
   }

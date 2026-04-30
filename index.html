@@ -9,6 +9,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="/components/site-header.js"></script>
     <script src="/components/site-footer.js"></script>
+    <script src="/components/case-card.js"></script>
   </head>
   <body>
     <site-header></site-header>
@@ -26,7 +27,7 @@
           <p>Product Designer<br>& Engineer</p>
         </div>
         <div class="intro-bio">
-          <p>Solving problems through design and code for the past 5 years. Most recently at Chronicle.com, working on their design system and AI research assistant. Previously built the e-commerce site and live UX for Lost Canyon Imports.</p>
+          <p>Solving problems through design and code for the past 5 years. Most recently at Pay Ready, working on B2B financial software for property management. Previously at Chronicle.com, working on their design system and AI research assistant. Also built the e-commerce site and live UX for Lost Canyon Imports.</p>
         </div>
       </section>
 
@@ -34,53 +35,44 @@
       <section class="cases-section">
 
         <div class="cases-grid">
-          <div class="case-item">
-            <span class="case-number">01</span>
-            <a href="/pages/chronicle-header.html" class="case-link">
-              <video class="card-img" autoplay muted loop preload="metadata" poster="/images/chronicle/Header card still.png">
-                <source src="/images/chronicle/header43full.mp4" type="video/mp4">
-              </video>
-              <div class="case-info">
-                <h2>Header Redesign <span class="arrow">→</span></h2>
-                <p class="case-desc">A context-aware header system designed through stakeholder workshops that serves users' goals on different page types</p>
-              </div>
-            </a>
-          </div>
+          <case-card
+            number="01"
+            href="/pages/chronicle-header.html"
+            title="Header Redesign"
+            description="A context-aware header system designed through stakeholder workshops that serves users' goals on different page types"
+            media-type="video"
+            src="/images/chronicle/header43full.mp4"
+            poster="/images/chronicle/Header card still.png"
+          ></case-card>
 
-          <div class="case-item">
-            <span class="case-number">02</span>
-            <a href="/pages/lostcanyonimports.html" class="case-link">
-              <video class="card-img" autoplay muted loop preload="metadata" poster="/images/lostcanyon/LCI card still.png">
-                <source src="/images/lostcanyon/LCI card lead.mp4" type="video/mp4">
-              </video>
-              <div class="case-info">
-                <h2>Lost Canyon Imports <span class="arrow">→</span></h2>
-                <p class="case-desc">A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them</p>
-              </div>
-            </a>
-          </div>
+          <case-card
+            number="02"
+            href="/pages/lostcanyonimports.html"
+            title="Lost Canyon Imports"
+            description="A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them"
+            media-type="video"
+            src="/images/lostcanyon/LCI card lead.mp4"
+            poster="/images/lostcanyon/LCI card still.png"
+          ></case-card>
 
-          <div class="case-item">
-            <span class="case-number">03</span>
-            <a href="/pages/chronicle-design-system.html" class="case-link">
-              <img src="/images/designsyscard.png" class="card-img">
-              <div class="case-info">
-                <h2>Design System <span class="arrow">→</span></h2>
-                <p class="case-desc">A year-long CMS redesign that eliminated technical debt and established a scalable design system</p>
-              </div>
-            </a>
-          </div>
+          <case-card
+            number="03"
+            href="/pages/chronicle-design-system.html"
+            title="Design System"
+            description="A year-long CMS redesign that eliminated technical debt and established a scalable design system"
+            media-type="image"
+            src="/images/designsyscard.png"
+          ></case-card>
 
-          <div class="case-item">
-            <span class="case-number">04</span>
-            <a href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9" target="_blank" class="case-link">
-              <img src="/images/nike lead.png" class="card-img">
-              <div class="case-info">
-                <h2>Amazon v. Nike <span class="arrow">→</span></h2>
-                <p class="case-desc">Keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)</p>
-              </div>
-            </a>
-          </div>
+          <case-card
+            number="04"
+            href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9"
+            target="_blank"
+            title="Amazon v. Nike"
+            description="Keyboard &amp; screenreader accessibility study of nike.com and amazon.com (opens in new tab)"
+            media-type="image"
+            src="/images/nike lead.png"
+          ></case-card>
         </div>
 
       </section>

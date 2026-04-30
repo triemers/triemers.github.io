@@ -162,7 +162,7 @@ case-card:first-child {
 .resume-link {
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: top;
 }
 
 .resume-link:hover {

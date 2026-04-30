@@ -3,7 +3,7 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <div class="header-container">
         <header>
-          <a href="/" class="logo">🦖 TRUX</a>
+          <a href="/" class="logo">TR</a>
           <div class="hamburger">
             <span></span>
             <span></span>

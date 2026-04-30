@@ -63,6 +63,25 @@
   padding: 0 60px;
 }
 
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
+  padding: 32px 0 48px;
+}
+
+.case-item {
+  display: flex;
+  flex-direction: column;
+  border-left: var(--border);
+  padding-left: 20px;
+}
+
+.case-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
 .case-number {
   display: block;
   font-size: 4rem;
@@ -78,6 +97,7 @@
   display: block;
   border-radius: 0;
   transition: opacity 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .card-img:hover {
@@ -87,7 +107,9 @@
 .case-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .case-link:hover {
@@ -115,66 +137,6 @@
   font-weight: 400;
   transition: transform 300ms 150ms;
   margin-left: 10px;
-}
-
-/* Case 01 — full-width hero */
-.case-01 {
-  padding: 32px 0 48px;
-}
-
-.case-01 .card-img {
-  margin-bottom: 20px;
-}
-
-.case-01 .case-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
-}
-
-.case-01 .case-desc {
-  max-width: 45%;
-}
-
-/* Case pair — 02 + 03 asymmetric */
-.case-pair {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  border-top: var(--border);
-}
-
-.case-pair-item {
-  padding: 32px 0 48px;
-}
-
-.case-pair-item .card-img {
-  margin-bottom: 20px;
-}
-
-.case-03 {
-  border-left: var(--border);
-  padding-left: 40px;
-}
-
-/* Case 04 — text row with image */
-.case-04 {
-  border-top: var(--border);
-  padding: 32px 0 48px;
-}
-
-.case-04 .case-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.case-04-img {
-  width: 200px;
-  height: auto;
-  flex-shrink: 0;
-  display: block;
 }
 
 /* ── 4. Resume section ───────────────────────────────────── */
@@ -252,36 +214,18 @@
     padding: 0 20px;
   }
 
-  .case-number {
-    font-size: 2.5rem;
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
   }
 
-  .case-01 .case-info {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .case-01 .case-desc {
-    max-width: 100%;
-  }
-
-  .case-pair {
-    grid-template-columns: 1fr;
-  }
-
-  .case-03 {
+  .case-item {
     border-left: none;
-    border-top: var(--border);
     padding-left: 0;
   }
 
-  .case-04 .case-link {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-
-  .case-04-img {
-    width: 100%;
+  .case-number {
+    font-size: 2.5rem;
   }
 
   .resume-section {

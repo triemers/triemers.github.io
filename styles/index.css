@@ -1,252 +1,289 @@
-/* Layout */
+/* ── Layout ──────────────────────────────────────────────── */
 .home-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 60px 20px;
-    margin: 20px 60px; 
-    flex: 1; 
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-/* Home title */
-.intro-section {
-    grid-column: 1 / span 2;
-    grid-row-start: 2;
+/* ── 1. Name section ─────────────────────────────────────── */
+.name-section {
+  padding: 32px 60px 28px;
+  border-bottom: var(--border);
 }
 
 .home-title {
-    font-family: var(--fontFamily);
-    color: var(--primaryTextColor);
-    font-size: var(--fontSizeXL);
-    line-height: 1.2;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
 }
 
-.intro-subhead {
-    font-size: var(--fontSizeM);
-    max-width: 800px;
+/* ── 2. Intro section ────────────────────────────────────── */
+.intro-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
+  padding: 40px 60px;
+  border-bottom: var(--border);
+  align-items: start;
 }
 
-/* text reveal stuff
-.text-reveal {
-    color: #999;
-    display: inline-block;
-    position: relative;
+.intro-role {
+  grid-column: 1;
+  border-left: 3px solid var(--accentOne);
+  padding-left: 20px;
 }
 
-.text-reveal::before {
-    animation: max-height 0.6s cubic-bezier(0.5, 1, 0.88, 1) 1 normal both;
-    animation-delay: var(--stagger-delay, 0s);
-    color: #666;
+.intro-bio {
+  grid-column: 2 / 4;
 }
 
-.text-reveal::after {
-    animation: max-width .8s cubic-bezier(0.5, 1, 0.88, 1) 1 normal both;
-    animation-delay: var(--stagger-delay, 0s);
-    color: var(--primaryTextColor);
+.intro-role p {
+  font-size: var(--fontSizeL);
+  font-weight: bold;
+  line-height: 1.5;
+  display: block;
+  max-width: none;
+  color: var(--primaryTextColor);
 }
 
-.text-reveal::before,
-.text-reveal::after {
-    content: attr(data-text);
-    left: 0;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
+.intro-bio p {
+  font-size: var(--fontSizeS);
+  display: block;
+  max-width: none;
+  color: var(--secondaryTextColor);
 }
 
-@keyframes max-width {
-    from {
-        max-width: 0;
-    }
-    to {
-        max-width: 100%;
-    }
+/* ── 3. Cases section ────────────────────────────────────── */
+.cases-section {
+  padding: 0 60px;
 }
 
-@keyframes max-height {
-    from {
-        max-height: 0;
-    }
-    to {
-        max-height: 100%;
-    }
-}
-*/
-/* Respect reduced motion preferences 
-@media (prefers-reduced-motion) {
-    .text-reveal {
-        color: var(--primaryTextColor, #303952);
-    }
-    .text-reveal::before,
-    .text-reveal::after {
-        animation: none;
-        content: "";
-    }
-}
-*/
-/*case cards*/
-.case-wrapper-4 {
-    grid-row-start: 4;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 40px;
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
 }
 
-.case-wrapper-2 {
-    grid-row-start: 4;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 60px;
+case-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: var(--border);
+  padding: 32px 20px 48px;
+  min-width: 0;
 }
 
-.case-card {
-    display: flex;
-    flex-direction: column;
+case-card:first-child {
+  border-left: none;
+  padding-left: 0;
 }
 
-.card-img { 
-    width: 100%;
-    height: auto;
-    transition: opacity 0.3s ease-in-out 100ms;
-    border-radius: 20px;
+.case-number {
+  display: block;
+  width: 100%;
+  font-size: 4rem;
+  color: var(--accentOne);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  transition: opacity 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .card-img:hover {
-    opacity: 0.5;
+  opacity: 0.7;
+}
+
+.case-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.case-link:hover {
+  text-decoration: none;
+}
+
+.case-link:hover .arrow {
+  transform: translateX(24px);
+}
+
+.case-info h2 {
+  margin: 0 0 8px 0;
 }
 
 .case-desc {
-    max-width: 90%;
-}
-
-/* Arrow hover animation */
-.home-case-title {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 20px 0px;
-    max-width: 95%;
-}
-
-.home-case-title h2 {
-    display: inline;
-    line-height: 1.2;
+  color: var(--secondaryTextColor);
+  font-size: var(--fontSizeS);
+  display: block;
+  line-height: 1.5;
 }
 
 .arrow {
-    font-size: 28px;
-    font-family: var(--fontFamily);
-    font-weight: 400;
-    transition: transform 300ms 150ms;
-    display: inline-block;
-    flex-shrink: 0;
-    margin-left: 10px;
-    white-space: nowrap;
+  display: inline-block;
+  font-size: var(--fontSizeL);
+  font-weight: 400;
+  transition: transform 300ms 150ms;
+  margin-left: 10px;
 }
 
-
-.case-card:hover .arrow,
-.resume-link:hover .arrow {
-    transform: translateX(24px);
+/* ── 4. Resume section ───────────────────────────────────── */
+.resume-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: var(--border);
+  margin: 0;
+  padding: 0 60px;
 }
 
-/* Resume section */
 .resume-item {
-    border-top: var(--border);
-    grid-row-start: 5;
-    padding: 20px 0px 60px 0px;
+  padding: 32px 40px 60px 0;
+}
+
+.resume-item + .resume-item {
+  padding-left: 40px;
+  border-left: var(--border);
 }
 
 .resume-link {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 10px;
-    transition: text-decoration 300ms 150ms;
+  cursor: pointer;
+  display: flex;
+  align-items: top;
 }
 
 .resume-link:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+}
+
+.resume-link:hover .arrow {
+  transform: translateX(24px);
 }
 
 .resume-item p {
-    display: block;
-    line-height: 1.5;
+  display: block;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: var(--secondaryTextColor);
 }
 
-#resume-1 { grid-column: 1 / span 1; align-self: flex-start; }
-#resume-2 { grid-column: 2 / span 1; }
-#resume-3 { grid-column: 3 / span 1; }
+/* ── Media queries ───────────────────────────────────────── */
 
-/* Media queries */
+/* 2×2 only — min-width keeps these nth-child rules out of the mobile cascade */
+@media screen and (min-width: 769px) and (max-width: 1240px) {
+  .cases-section {
+    padding: 0;
+  }
+
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* odd = left column: absorb section's left margin, no left border */
+  case-card:nth-child(odd) {
+    border-left: none;
+    padding-left: 60px;
+  }
+
+  /* even = right column: absorb section's right margin */
+  case-card:nth-child(even) {
+    padding-right: 60px;
+  }
+
+  /* row 2: full-width horizontal divider */
+  case-card:nth-child(n+3) {
+    border-top: var(--border);
+  }
+
+  .resume-section {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .resume-item {
+    padding: 32px 60px 60px;
+  }
+
+  .resume-item + .resume-item {
+    border-left: none;
+    border-top: var(--border);
+  }
+}
+
 @media screen and (max-width: 768px) {
-    .home-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        padding: 20px;
-        grid-gap: 20px;
-    }
+  .name-section {
+    padding: 24px 20px 20px;
+  }
 
-    .home-title {
-        margin: 40px 0;
-        font-size: var(--fontSizeL);
-        line-height: 1.2;
-    }
+  .home-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    letter-spacing: 0.05em;
+  }
 
-    .home-case-title h2 {
-        margin: 10px 0;
-        font-size: 28px;
-    }
+  .intro-section {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+    padding: 24px 20px;
+  }
 
-    .case-wrapper-4 {
-        display: flex;
-        flex-direction: column;
-    }
+  .intro-bio {
+    grid-column: 1;
+  }
 
-    .case-wrapper-2 {
-        display: flex;
-        flex-direction: column;
-    }
+  .intro-role p {
+    font-size: var(--fontSizeM);
+  }
 
-    .case-card {
-        margin: 20px 0px;
-    }
-    .case-desc {
-        margin-top: 0;
-    }
+  .cases-section {
+    padding: 0;
+  }
 
-    .resume-link {
-        text-decoration: underline;
-    }
+  .cases-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 
-    .resume-item {
-        border-top: var(--border);
-        width: 100%;
+  case-card {
+    border-left: none;
+    border-top: var(--border);
+    padding: 24px 20px;
+  }
 
+  /* restore left padding overridden by base case-card:first-child rule */
+  case-card:first-child {
+    border-top: none;
+    padding-left: 20px;
+  }
 
-}
-}
+  .case-number {
+    font-size: 2.5rem;
+  }
 
+  .resume-section {
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
 
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    .home-title {
-        margin: 0px 10px;
-        font-size: var(--fontSizeL);
-    }
+  .resume-item {
+    padding: 24px 20px 32px;
+  }
 
-    .resume-item {
-        border-top: var(--border);
-        width: 100%;
-    }
-
-    .case-wrapper-4 {
-        display: flex;
-        flex-direction: column;
-    }
-
+  .resume-item + .resume-item {
+    border-left: none;
+    border-top: var(--border);
+  }
 }

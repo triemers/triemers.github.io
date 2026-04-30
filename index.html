@@ -7,120 +7,96 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="/components/site-header.js"></script>
+    <script src="/components/site-footer.js"></script>
+    <script src="/components/case-card.js"></script>
   </head>
   <body>
-    <div class="header-container">
-      <header>
-          <a href="/" class="logo">🦖 TRUX</a>
-          
-          <div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          
-          <nav class="nav-menu">
-              <a href="/pages/about.html" class="nav-link">About</a>
-              <a href="/files/ResumeLong.pdf" class="nav-link" target="_blank">Resume</a>
-              <!--REMOVING FOR NOW
-              <a href="/contact" class="nav-link">contact</a>
-              <a href="/blog" class="nav-link">blog</a>
-              -->
-            </nav>
-      </header>
-    </div>
-    <div class="home-wrapper">
-      <div class="intro-section">
-        <h1 class="home-title">Hi, I'm <strong>Tori Riemersma</strong>.</h1>
-          <h2 class="intro-subhead">I'm a <strong>product designer and engineer</strong>, solving problems through design and code for the past 5 years. Most recently, I worked on Chronicle.com's <B>design system</B> and digital products such as their <b>AI research assistant</b>. Previously, I built the e-commerce site and developed the live UX for Lost Canyon Imports.</h2>
+    <site-header></site-header>
+
+    <main class="home-wrapper">
+
+      <!-- Name hero -->
+      <section class="name-section">
+        <h1 class="home-title">Tori Riemersma</h1>
+      </section>
+
+      <!-- Intro: vertical label | role | bio -->
+      <section class="intro-section">
+<div class="intro-role">
+          <p>Product Designer & Engineer</p>
+        </div>
+        <div class="intro-bio">
+          <p>Solving problems through design and code for the past 5 years. Most recently at Pay Ready, working on B2B financial software for property management. Previously at Chronicle.com, working on their design system and AI research assistant. Also built the e-commerce site and live UX for Lost Canyon Imports.</p>
+        </div>
+      </section>
+
+      <!-- Cases: uniform 4-column grid -->
+      <section class="cases-section">
+
+        <div class="cases-grid">
+          <case-card
+            number="01"
+            href="/pages/chronicle-header.html"
+            title="Header Redesign"
+            description="A context-aware header system designed through stakeholder workshops that serves users' goals on different page types"
+            media-type="video"
+            src="/images/chronicle/header43full.mp4"
+            poster="/images/chronicle/Header card still.png"
+          ></case-card>
+
+          <case-card
+            number="02"
+            href="/pages/lostcanyonimports.html"
+            title="Lost Canyon Imports"
+            description="A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them"
+            media-type="video"
+            src="/images/lostcanyon/LCI card lead.mp4"
+            poster="/images/lostcanyon/LCI card still.png"
+          ></case-card>
+
+          <case-card
+            number="03"
+            href="/pages/chronicle-design-system.html"
+            title="Design System"
+            description="A year-long CMS redesign that eliminated technical debt and established a scalable design system"
+            media-type="image"
+            src="/images/designsyscard.png"
+          ></case-card>
+
+          <case-card
+            number="04"
+            href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9"
+            target="_blank"
+            title="Amazon v. Nike"
+            description="Keyboard &amp; screenreader accessibility study of nike.com and amazon.com (opens in new tab)"
+            media-type="image"
+            src="/images/nike lead.png"
+          ></case-card>
         </div>
 
-        <div class="case-wrapper-2">
+      </section>
 
-          
-          <div class="case-card" id="case-1">
-            <a href="/pages/chronicle-header.html">
-                  <video class="card-img" autoplay muted loop preload="metadata" poster="/images/chronicle/Header card still.png">
-             <source src="/images/chronicle/header43full.mp4" type="video/mp4" alt="Screenshot of the new Chronicle.com header on the homepage">
-          </video>
-              <div class="home-case-title">
-                <h2>Header Redesign<span class="arrow">→</span></h2>
-              </div>
-              <p class="case-desc">A context-aware header system designed through stakeholder workshops that serves users' goals on different page types</p>
-            </a>
-          </div>
+      <!-- Resume -->
+      <section class="resume-section">
+        <div class="resume-item resume-link" onclick="window.open('/files/ResumeLong.pdf', '_blank')">
+          <h2>Resume (new tab) <span class="arrow">→</span></h2>
+        </div>
+        <div class="resume-item">
+          <h2>Education</h2>
+          <p><strong>MPS UX Design,</strong> Maryland Institute College of Art, 2021–2022</p>
+          <p><strong>BMus Music Education,</strong> Arizona State University, 2012–2016</p>
+        </div>
+        <div class="resume-item">
+          <h2>Experience</h2>
+          <p><strong>UX Designer,</strong> The Chronicle of Higher Education, 2022–2025</p>
+          <p><strong>Founding UX Designer,</strong> Lost Canyon Imports, 2021–2022</p>
+        </div>
+      </section>
 
+    </main>
 
-          <div class="case-card" id="case-2">
-            <a href="/pages/lostcanyonimports.html">
-              
-            <video class="card-img" autoplay muted loop preload="metadata" poster="/images/lostcanyon/LCI card still.png">
-             <source src="/images/lostcanyon/LCI card lead.mp4" type="video/mp4" alt="Screenshot of the new Chronicle.com header on the homepage">
-          </video> 
-          
-                <div class="home-case-title">
-                  <h2>Lost Canyon Imports <span class="arrow">→</span></h2>
-                </div>
-                <p class="case-desc">A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them</p>
-            </a>
-          </div>
-
-          <div class="case-card" id="case-3">
-            <a href="/pages/chronicle-design-system.html">
-              <img src="/images/designsyscard.png" class="card-img">
-              <div class="home-case-title">
-                <h2>Design System<span class="arrow">→</span></h2>
-              </div>
-              <p class="case-desc">A year-long CMS redesign that eliminated technical debt and established a scalable design system</p>
-            </a>
-          </div>
-
-          <div class="case-card" id="case-4">
-            <a href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9" target="_blank">
-              <img src="/images/nike lead.png" class="card-img">
-              <div class="home-case-title">
-                <h2>Amazon v. Nike</h2>
-                <div class="arrow">→</div>
-              </div>
-              <p class="case-desc">Keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)</p>
-            </a>
-          </div>
-
-          </div>
-
-          <div class="resume-item resume-link" id="resume-1" onclick="window.open('/files/ResumeLong.pdf', '_blank')">
-    <h2>Resume (new tab)<span class="arrow">→</span></h2> 
-</div>
-          <div class="resume-item" id="resume-2">
-            <h2>Education //</h2>
-            <p><strong>MPS UX Design,</strong> Maryland Institute College of Art, 2021-2022</p>
-            <p><strong>BMus Music Education</strong> Arizona State University, 2012-2016</p>
-          </div>
-          <div class="resume-item" id="resume-3">
-            <h2>Experience //</h2>
-            <p><strong>UX Designer,</strong> The Chronicle of Higher Education, 2022-2025</p>
-            <p><strong>Founding UX Designer,</strong> Lost Canyon Imports, 2021-2022</p>
-          </div>
-  </div>
-   <div class="footer-container">
-        <footer>
-            <div class="footer-left">
-                <a href="/" class="logo">🦖 TRUX</a>
-                <div class="footer-email">// triemers12@gmail.com</div>
-            </div>
-            
-            <nav class="footer-nav">
-                <a href="/pages/about.html" class="footer-link">About</a>
-                <a href="/files/ResumeLong.pdf" class="footer-link">Resume</a>
-               <!--REMOVING FOR NOW <a href="/contact" class="footer-link">contact</a>
-              <a href="/blog" class="nav-link">blog</a>
-              -->
-            </nav>
-        </footer>
-    </div>
-    
-    <script src="/scripts/header.js"></script>
+    <site-footer></site-footer>
     <script src="/scripts/scripts.js"></script>
   </body>
-
 </html>

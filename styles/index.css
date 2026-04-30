@@ -23,24 +23,21 @@
 /* ── 2. Intro section ────────────────────────────────────── */
 .intro-section {
   display: grid;
-  grid-template-columns: 40px 1fr 2fr;
-  gap: 0 60px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
   padding: 40px 60px;
   border-bottom: var(--border);
   align-items: start;
 }
 
-.vertical-label {
-  writing-mode: vertical-lr;
-  font-size: var(--fontSizeXXS);
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--secondaryTextColor);
-}
-
 .intro-role {
+  grid-column: 1;
   border-left: 3px solid var(--accentOne);
   padding-left: 20px;
+}
+
+.intro-bio {
+  grid-column: 2 / -1;
 }
 
 .intro-role p {
@@ -189,21 +186,9 @@
   }
 
   .intro-section {
-    grid-template-columns: 30px 1fr;
-    grid-template-rows: auto auto;
-    gap: 0 20px;
+    grid-template-columns: 1fr;
+    gap: 20px 0;
     padding: 24px 20px;
-  }
-
-  .intro-role {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .intro-bio {
-    grid-column: 2;
-    grid-row: 2;
-    margin-top: 20px;
   }
 
   .intro-role p {

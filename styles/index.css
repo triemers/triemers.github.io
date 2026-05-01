@@ -5,10 +5,24 @@
   flex: 1;
 }
 
+/* Hide the shared header on the home page — nav lives in .name-section */
+body:has(.home-wrapper) > site-header {
+  display: none;
+}
+
 /* ── 1. Name section ─────────────────────────────────────── */
 .name-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 32px 60px 28px;
   border-bottom: var(--border);
+}
+
+.home-nav {
+  display: flex;
+  gap: 40px;
+  flex-shrink: 0;
 }
 
 .home-title {
@@ -225,7 +239,13 @@ case-card:first-child {
 
 @media screen and (max-width: 768px) {
   .name-section {
+    flex-direction: column;
+    gap: 16px;
     padding: 24px 20px 20px;
+  }
+
+  .home-nav {
+    gap: 32px;
   }
 
   .home-title {

@@ -164,6 +164,17 @@ li {
     flex-direction: column;
     align-items: flex-start;
     margin: 10px 0;
+    counter-reset: contents-counter;
+}
+
+.contents-link::before {
+    counter-increment: contents-counter;
+    content: counter(contents-counter, decimal-leading-zero);
+    font-size: var(--fontSizeXS);
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-weight: 400;
+    flex-shrink: 0;
 }
 
 .contents-item {

@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"casestudies\\\\|scripts\\\\|case-study-wrapper\" C:\\\\Users\\\\\\\\\"Crushinator 3000\"\\\\Documents\\\\triemers.github.io\\\\pages\\\\chronicle-design-system.html)"
+    ]
+  }
+}

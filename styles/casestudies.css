@@ -29,6 +29,18 @@ li {
     display: flex;
     flex-direction: column;
     margin: 60px;
+    counter-reset: section-counter;
+}
+
+.case-section .section-title::before {
+    counter-increment: section-counter;
+    content: counter(section-counter, decimal-leading-zero);
+    display: block;
+    font-size: 4rem;
+    color: var(--accentOne);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
 }
 
 /* Lead block - matches case-section structure */
@@ -86,6 +98,7 @@ li {
     flex-direction: row;
     border-top: var(--border);
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 .case-contents {
@@ -96,14 +109,14 @@ li {
 .case-contents > h3:not(:first-of-type) {
     border-top: var(--border);
     max-width: 800px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .case-body {
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .case-roles {
@@ -152,6 +165,17 @@ li {
     flex-direction: column;
     align-items: flex-start;
     margin: 10px 0;
+    counter-reset: contents-counter;
+}
+
+.contents-link::before {
+    counter-increment: contents-counter;
+    content: counter(contents-counter, decimal-leading-zero);
+    font-size: var(--fontSizeXS);
+    font-family: var(--fontFamily);
+    color: var(--primaryTextColor);
+    font-weight: 400;
+    flex-shrink: 0;
 }
 
 .contents-item {
@@ -487,5 +511,46 @@ p.caption-below {
 
     .case-roles {
         max-width: 1000px;
+    }
+}
+
+/* ── Back to top ──────────────────────────────────────── */
+.back-to-top {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    height: 44px;
+    padding: 0 16px;
+    gap: 10px;
+    white-space: nowrap;
+    border: var(--border);
+    background: var(--bgColor);
+    color: var(--primaryTextColor);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSizeXS);
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, background 0.2s ease, color 0.2s ease;
+    z-index: 100;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:hover {
+    background: var(--primaryTextColor);
+    color: var(--bgColor);
+}
+
+@media screen and (max-width: 768px) {
+    .back-to-top {
+        display: none;
     }
 }

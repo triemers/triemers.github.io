@@ -98,6 +98,7 @@ li {
     flex-direction: row;
     border-top: var(--border);
     align-items: flex-start;
+    padding-top: 20px;
 }
 
 .case-contents {
@@ -108,14 +109,14 @@ li {
 .case-contents > h3:not(:first-of-type) {
     border-top: var(--border);
     max-width: 800px;
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .case-body {
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .case-roles {

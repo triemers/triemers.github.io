@@ -3,7 +3,7 @@
     --fontFamily: 'Helvetica', sans-serif;
     --bgColor: #fafafa;
     --primaryTextColor: #333333;
-    --secondaryTextColor: #666666;
+    --secondaryTextColor: #4d4d4d;
     --linkTextColor: #582630;
     --accentOne: #CC5500;
     --black: #333333;
@@ -44,7 +44,7 @@ p, h1, h2, li {
     color: var(--primaryTextColor);
     text-decoration: none;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.65;
 }
 
 a {

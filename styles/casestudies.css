@@ -29,6 +29,18 @@ li {
     display: flex;
     flex-direction: column;
     margin: 60px;
+    counter-reset: section-counter;
+}
+
+.case-section .section-title::before {
+    counter-increment: section-counter;
+    content: counter(section-counter, decimal-leading-zero);
+    display: block;
+    font-size: 4rem;
+    color: var(--accentOne);
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 8px;
 }
 
 /* Lead block - matches case-section structure */

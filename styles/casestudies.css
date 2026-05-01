@@ -32,7 +32,7 @@ li {
     counter-reset: section-counter;
 }
 
-.case-section .section-title::before {
+.case-section .section-title::after {
     counter-increment: section-counter;
     content: counter(section-counter, decimal-leading-zero);
     display: block;
@@ -40,7 +40,7 @@ li {
     color: var(--accentOne);
     font-weight: 400;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 /* Lead block - matches case-section structure */

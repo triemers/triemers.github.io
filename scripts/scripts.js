@@ -130,3 +130,30 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.case-body, .myImg, .card-img, .slider-container').forEach(el => {
     observer.observe(el);
 });
+
+// Back to top — case study pages only
+if (document.querySelector('.case-study-wrapper')) {
+    var backToTop = document.createElement('button');
+    backToTop.className = 'back-to-top';
+    backToTop.innerHTML = 'Back to top ↑';
+    backToTop.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTop);
+
+    backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function checkBackToTop() {
+        var scrolled = Math.max(
+            window.scrollY || 0,
+            document.documentElement.scrollTop || 0,
+            document.body.scrollTop || 0
+        );
+        backToTop.classList.toggle('visible', scrolled > window.innerHeight * 2.5);
+    }
+
+    [window, document, document.documentElement, document.body].forEach(function (el) {
+        el.addEventListener('scroll', checkBackToTop, { passive: true });
+    });
+}

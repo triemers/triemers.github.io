@@ -92,7 +92,7 @@ case-card {
 
 case-card:first-child {
   border-left: none;
-  padding-left: 0;
+  padding-left: 20px;
 }
 
 .case-number {

@@ -10,6 +10,11 @@ body:has(.home-wrapper) > site-header {
   display: none;
 }
 
+/* Home page is borderless — drop the shared footer's top border here only */
+body:has(.home-wrapper) .footer-container {
+  border-top: none;
+}
+
 /* ── 1. Name section ─────────────────────────────────────── */
 .name-section {
   display: flex;
@@ -39,7 +44,6 @@ body:has(.home-wrapper) > site-header {
   grid-template-columns: repeat(4, 1fr);
   gap: 0 40px;
   padding: 0 60px 40px;
-  border-bottom: var(--border);
   align-items: start;
 }
 
@@ -74,38 +78,25 @@ body:has(.home-wrapper) > site-header {
 
 /* ── 3. Cases section ────────────────────────────────────── */
 .cases-section {
-  padding: 0 60px;
+  padding: 80px 60px 0;
 }
 
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 40px;
 }
 
 case-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: var(--border);
-  padding: 32px 20px 48px;
+  padding: 32px 0 48px;
   min-width: 0;
 }
 
-case-card:first-child {
-  border-left: none;
-  padding-left: 20px;
-}
-
 .case-number {
-  display: block;
-  width: 100%;
-  font-size: 4rem;
-  color: var(--accentOne);
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 16px;
-  text-align: left;
+  display: none;
 }
 
 .card-img {
@@ -160,19 +151,14 @@ case-card:first-child {
 /* ── 4. Resume section ───────────────────────────────────── */
 .resume-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: var(--border);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
   margin: 0;
-  padding: 0 60px;
+  padding: 72px 60px 0;
 }
 
 .resume-item {
-  padding: 32px 40px 60px 0;
-}
-
-.resume-item + .resume-item {
-  padding-left: 40px;
-  border-left: var(--border);
+  padding: 32px 0 60px;
 }
 
 .resume-link {
@@ -191,46 +177,35 @@ case-card:first-child {
 
 .resume-item p {
   display: block;
-  line-height: 1.5;
-  margin-top: 8px;
+  line-height: 1.2;
   color: var(--secondaryTextColor);
+}
+
+/* Match the h2-to-paragraph gap used in the work cards (.case-info h2
+   margin-bottom 8px + .case-desc's default 1em top margin, 18px = 26px) */
+.resume-item p:first-of-type {
+  margin-top: 26px;
+}
+
+.resume-item p + p {
+  margin-top: 4px;
 }
 
 /* ── Media queries ───────────────────────────────────────── */
 
-/* 2×2 only — min-width keeps these nth-child rules out of the mobile cascade */
+/* 2×2 only */
 @media screen and (min-width: 769px) and (max-width: 1240px) {
   .name-section {
     padding-bottom: 12px;
-  }
-
-  .cases-section {
-    padding: 0;
   }
 
   .cases-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* odd = left column: absorb section's left margin, no left border */
-  case-card:nth-child(odd) {
-    border-left: none;
-    padding-left: 60px;
-  }
-
-  /* even = right column: absorb section's right margin */
-  case-card:nth-child(even) {
-    padding-right: 60px;
-  }
-
-  /* row 2: full-width horizontal divider */
-  case-card:nth-child(n+3) {
-    border-top: var(--border);
-  }
-
   .resume-section {
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: 72px 0 0;
   }
 
   .resume-item {
@@ -239,8 +214,6 @@ case-card:first-child {
 
   .resume-item + .resume-item {
     padding-left: 60px;
-    border-left: none;
-    border-top: var(--border);
   }
 }
 
@@ -286,7 +259,7 @@ case-card:first-child {
   }
 
   .cases-section {
-    padding: 0;
+    padding: 48px 0 0;
   }
 
   .cases-grid {
@@ -295,25 +268,13 @@ case-card:first-child {
   }
 
   case-card {
-    border-left: none;
-    border-top: var(--border);
     padding: 24px 20px;
-  }
-
-  /* restore left padding overridden by base case-card:first-child rule */
-  case-card:first-child {
-    border-top: none;
-    padding-left: 20px;
-  }
-
-  .case-number {
-    font-size: 2.5rem;
   }
 
   .resume-section {
     grid-template-columns: 1fr;
     margin: 0;
-    padding: 0;
+    padding: 48px 0 0;
   }
 
   .resume-item {
@@ -322,7 +283,5 @@ case-card:first-child {
 
   .resume-item + .resume-item {
     padding-left: 20px;
-    border-left: none;
-    border-top: var(--border);
   }
 }

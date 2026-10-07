@@ -43,6 +43,10 @@ li {
     margin-top: 8px;
 }
 
+.case-section .section-title.no-counter::after {
+    content: none;
+}
+
 /* Lead block - matches case-section structure */
 .lead-block {
     display: flex;

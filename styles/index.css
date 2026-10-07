@@ -154,7 +154,7 @@ case-card {
   grid-template-columns: repeat(4, 1fr);
   gap: 0 40px;
   margin: 0;
-  padding: 0 60px;
+  padding: 72px 60px 0;
 }
 
 .resume-item {
@@ -196,7 +196,7 @@ case-card {
 
   .resume-section {
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: 72px 0 0;
   }
 
   .resume-item {
@@ -265,7 +265,7 @@ case-card {
   .resume-section {
     grid-template-columns: 1fr;
     margin: 0;
-    padding: 0;
+    padding: 48px 0 0;
   }
 
   .resume-item {

@@ -177,9 +177,18 @@ case-card {
 
 .resume-item p {
   display: block;
-  line-height: 1.5;
-  margin-top: 8px;
+  line-height: 1.2;
   color: var(--secondaryTextColor);
+}
+
+/* Match the h2-to-paragraph gap used in the work cards (.case-info h2
+   margin-bottom 8px + .case-desc's default 1em top margin, 18px = 26px) */
+.resume-item p:first-of-type {
+  margin-top: 26px;
+}
+
+.resume-item p + p {
+  margin-top: 4px;
 }
 
 /* ── Media queries ───────────────────────────────────────── */

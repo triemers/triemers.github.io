@@ -15,8 +15,7 @@ body:has(.home-wrapper) > site-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 32px 60px 28px;
-  border-bottom: var(--border);
+  padding: 32px 60px 24px;
 }
 
 .home-nav {
@@ -29,7 +28,7 @@ body:has(.home-wrapper) > site-header {
   font-size: clamp(2.5rem, 6vw, 5.5rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
   margin: 0;
 }
@@ -39,14 +38,13 @@ body:has(.home-wrapper) > site-header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0 40px;
-  padding: 40px 60px;
+  padding: 0 60px 40px;
   border-bottom: var(--border);
   align-items: start;
 }
 
 .intro-role {
   grid-column: 1;
-  border-left: 3px solid var(--accentOne);
   padding-left: 20px;
 }
 
@@ -57,9 +55,12 @@ body:has(.home-wrapper) > site-header {
 .intro-role p {
   font-size: var(--fontSizeL);
   font-weight: bold;
-  line-height: 1.5;
+  font-style: italic;
+  text-transform: lowercase;
+  line-height: 1;
   display: block;
   max-width: none;
+  margin: 0;
   color: var(--primaryTextColor);
 }
 
@@ -67,6 +68,7 @@ body:has(.home-wrapper) > site-header {
   font-size: var(--fontSizeS);
   display: block;
   max-width: none;
+  margin: 0;
   color: var(--secondaryTextColor);
 }
 

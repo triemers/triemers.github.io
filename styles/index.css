@@ -151,17 +151,14 @@ case-card {
 /* ── 4. Resume section ───────────────────────────────────── */
 .resume-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
   margin: 0;
   padding: 0 60px;
 }
 
 .resume-item {
-  padding: 32px 40px 60px 0;
-}
-
-.resume-item + .resume-item {
-  padding-left: 40px;
+  padding: 32px 0 60px;
 }
 
 .resume-link {

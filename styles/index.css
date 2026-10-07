@@ -241,9 +241,16 @@ case-card:first-child {
 
 @media screen and (max-width: 768px) {
   .name-section {
+    position: relative;
     flex-direction: column;
     gap: 16px;
     padding: 24px 20px 20px;
+  }
+
+  .name-section .hamburger {
+    position: absolute;
+    top: 24px;
+    right: 20px;
   }
 
   .home-nav {

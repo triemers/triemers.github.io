@@ -20,6 +20,25 @@
 
 console.log('Script loaded! Number of images:', document.querySelectorAll('.myImg').length);
 
+// Homepage nav hamburger — mirrors the toggle logic in components/site-header.js,
+// since the home page uses its own nav inside .name-section instead of <site-header>.
+var homeHamburger = document.querySelector('.name-section .hamburger');
+var homeNavMenu = document.querySelector('.name-section .nav-menu');
+
+if (homeHamburger && homeNavMenu) {
+  homeHamburger.addEventListener('click', function () {
+    homeHamburger.classList.toggle('active');
+    homeNavMenu.classList.toggle('active');
+  });
+
+  homeNavMenu.querySelectorAll('.nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      homeHamburger.classList.remove('active');
+      homeNavMenu.classList.remove('active');
+    });
+  });
+}
+
 //IMAGE MODALS -- it works now 
  // Get all elements needed
 var images = document.querySelectorAll('.myImg');

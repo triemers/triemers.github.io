@@ -200,6 +200,10 @@ case-card:first-child {
 
 /* 2×2 only — min-width keeps these nth-child rules out of the mobile cascade */
 @media screen and (min-width: 769px) and (max-width: 1240px) {
+  .name-section {
+    padding-bottom: 12px;
+  }
+
   .cases-section {
     padding: 0;
   }
@@ -234,6 +238,7 @@ case-card:first-child {
   }
 
   .resume-item + .resume-item {
+    padding-left: 60px;
     border-left: none;
     border-top: var(--border);
   }
@@ -244,7 +249,7 @@ case-card:first-child {
     position: relative;
     flex-direction: column;
     gap: 16px;
-    padding: 24px 20px 20px;
+    padding: 24px 20px 10px;
   }
 
   .name-section .hamburger {
@@ -265,7 +270,7 @@ case-card:first-child {
   .intro-section {
     grid-template-columns: 1fr;
     gap: 20px 0;
-    padding: 24px 20px;
+    padding: 12px 20px 24px;
   }
 
   .intro-role {
@@ -316,6 +321,7 @@ case-card:first-child {
   }
 
   .resume-item + .resume-item {
+    padding-left: 20px;
     border-left: none;
     border-top: var(--border);
   }

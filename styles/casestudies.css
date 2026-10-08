@@ -11,7 +11,7 @@
 
 .case-subhead {
     font-size: var(--fontSizeS);
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     font-weight: 400;
 }
 
@@ -19,7 +19,7 @@ li {
     font-family: var(--fontFamily);
     font-size: var(--fontSizeS);
     line-height: 1.4;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
 }
 
 /*
@@ -28,6 +28,7 @@ li {
 .case-study-wrapper {
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin: 60px;
     counter-reset: section-counter;
 }
@@ -64,11 +65,11 @@ li {
 .lead-img {
     display: block;
     width: 100%;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     height: auto;
     margin: 20px 0;
     object-fit: contain;
-    border-radius: 20px;
+    border-radius: var(--borderRadius);
 }
 
 /* Contents sidebar - shared styles */
@@ -112,14 +113,14 @@ li {
 
 .case-contents > h3:not(:first-of-type) {
     border-top: var(--border);
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     padding-top: 40px;
 }
 
 .case-body {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     margin: 40px 0;
 }
 
@@ -127,7 +128,7 @@ li {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     justify-content: space-between;
 }
 
@@ -220,7 +221,7 @@ li {
     gap: 20px;
     margin: 20px 0;
     align-items: flex-start;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
 }
 
 .case-description-wrapper {
@@ -248,12 +249,11 @@ li {
     max-height: 150px;
     width: auto;
     transition: opacity 0.3s 100ms;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
 }
 
 .card-img-small:hover {
     opacity: 0.5;
-    border-radius: 10px;
 }
 
 /* IMAGES */
@@ -265,13 +265,12 @@ p.caption-below {
 
 /* Image Modal */
 .myImg {
-    border-radius: 0;
     cursor: pointer;
     transition: opacity 0.3s;
     max-height: 600px;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     width: auto;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
 }
 
 .myImg:hover {
@@ -298,16 +297,16 @@ p.caption-below {
     width: 80%;
     cursor: auto;
     animation: zoom 0.6s;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
 }
 
 .modal-caption {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 800px;
+    max-width: var(--contentMaxWidth);
     text-align: center;
-    color: #ccc;
+    color: var(--bgColor);
     padding: 10px 0;
     height: 150px;
     animation: zoom 0.6s;
@@ -322,15 +321,15 @@ p.caption-below {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: var(--bgColor);
     font-size: 40px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: opacity 0.3s;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    opacity: 0.7;
     text-decoration: none;
     cursor: pointer;
 }
@@ -344,7 +343,7 @@ p.caption-below {
     max-width: 900px;
     overflow: hidden;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
     align-self: flex-start;
 }
 
@@ -357,7 +356,7 @@ p.caption-below {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--borderRadius);
 }
 
 .slider .before {
@@ -405,7 +404,7 @@ p.caption-below {
     height: 30px;
     background: white;
     border-radius: 50%;
-    border: 2px solid #333;
+    border: 2px solid var(--primaryTextColor);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     background-image: 
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M15 18l-6-6 6-6'/%3E%3C/svg%3E"),
@@ -484,18 +483,8 @@ p.caption-below {
         max-height: 400px;
     }
 
-    /* Hide elements that don't work on mobile */
-    .about-img-container {
+    .back-to-top {
         display: none;
-    }
-
-    .gallery {
-        flex-direction: column;
-    }
-
-    .gallery > img {
-        width: 90%;
-        height: auto;
     }
 }
 
@@ -551,10 +540,4 @@ p.caption-below {
 .back-to-top:hover {
     background: var(--primaryTextColor);
     color: var(--bgColor);
-}
-
-@media screen and (max-width: 768px) {
-    .back-to-top {
-        display: none;
-    }
 }

@@ -1,0 +1,82 @@
+/* About page — follows the home page's 4-column grid instead of the
+   case-study sidebar layout. See index.css .intro-section / .intro-role /
+   .intro-bio for the pattern this mirrors. */
+
+/* Home page has no rules under its nav — match that here */
+.about-page .header-container {
+  border-bottom: none;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.about-title {
+  font-size: var(--fontSizeL);
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0;
+  padding: 40px 60px 0;
+  color: var(--primaryTextColor);
+}
+
+.about-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 40px;
+  padding: 40px 60px;
+  align-items: start;
+}
+
+.about-label {
+  grid-column: 1;
+  font-size: var(--fontSizeL);
+  font-weight: bold;
+  font-style: italic;
+  text-transform: lowercase;
+  line-height: 1;
+  margin: 0;
+  color: var(--primaryTextColor);
+}
+
+.about-content {
+  grid-column: 2 / 4;
+}
+
+.about-content p {
+  display: block;
+  font-size: var(--fontSizeS);
+  line-height: 1.5;
+  max-width: none;
+  margin: 0 0 16px 0;
+  color: var(--secondaryTextColor);
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Hanging indent so wrapped lines align under the first word, not the emoji */
+.emoji-line {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .about-title {
+    padding: 24px 20px 0;
+  }
+
+  .about-row {
+    grid-template-columns: 1fr;
+    gap: 12px 0;
+    padding: 24px 20px;
+  }
+
+  .about-content {
+    grid-column: 1;
+  }
+}

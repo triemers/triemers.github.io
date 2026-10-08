@@ -74,10 +74,7 @@ Before/after slider: `.slider-container` > `.slider` > `.before` + `.after` + `.
 
 ## Known issues / tech debt
 
-- `border-radius: 20px` / `10px` on `.lead-img`, `.modal-content`, `.myImg`, `.card-img-small`, `.slider-container`, `.slider img` in casestudies.css — violates `--borderRadius: 0px` token
-- `body { height: 100vh }` in styles.css is a leftover GPT hack (noted in comment) — causes layout issues on tall pages
 - `p { display: inline }` globally in styles.css forces every section to override it back to `block`
-- Logo is `🦖 TRUX` — emoji breaks Swiss register
 
 ## Git
 

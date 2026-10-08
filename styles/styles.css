@@ -15,6 +15,7 @@
     --fontSizeXS: 14px;
     --fontSizeXXS: .75rem; /* 12px captions */
     --borderRadius: 0px;
+    --contentMaxWidth: 800px; /* case study body copy, images, roles */
 }
 
 body {
@@ -23,7 +24,7 @@ body {
     color: var(--primaryTextColor);
     display: flex;
     flex-direction: column;
-    height: 100vh; /*GPT CODE*/
+    min-height: 100vh;
 }
 
 /* typography */
@@ -117,9 +118,6 @@ h3 {
     text-transform: uppercase;
 }
 
-.nav-menu > a {
-    text-transform: capitalize;
-}
  .nav-menu, .footer-nav {
             display: flex;
             gap: 40px;
@@ -129,6 +127,7 @@ h3 {
             text-decoration: none;
             color: var(--black);
             font-size: var(--fontSizeS);
+            text-transform: uppercase;
         }
 
 .nav-link:hover {

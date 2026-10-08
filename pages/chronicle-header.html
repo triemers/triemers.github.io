@@ -9,6 +9,9 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="/components/site-header.js"></script>
     <script src="/components/site-footer.js"></script>
+    <script src="/components/case-studies-data.js"></script>
+    <script src="/components/related-work.js"></script>
+    <script src="/components/case-image.js"></script>
   </head>
   <body>
     <site-header></site-header>
@@ -135,13 +138,7 @@
             <li>Define success metrics that would guide design decisions</li>
           </ul>
 
-          <img class="myImg" src="/images/chronicle/header-figjam.png" alt="Screenshot of a Figjam board that has been completed showing a step by step of the stakeholder design workshops">
-          <div class="myModal modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="/images/chronicle/header-figjam.png">
-            <div class="modal-caption">The Figjam board after the first design workshop.</div>
-          </div>
-          <p class="caption-below">Figjam showing the process of the stakeholder design workshops.</p>
+          <case-image src="/images/chronicle/header-figjam.png" alt="Screenshot of a Figjam board that has been completed showing a step by step of the stakeholder design workshops">Figjam showing the process of the stakeholder design workshops.</case-image>
             <br>
 
           <h3>Workshop Outcomes</h3>
@@ -171,31 +168,19 @@
             <li>We can A/B test different slim header configurations without rebuilding the entire header</li>
           </ul>
 
-          <img class="myImg" src="/images/chronicle/system-diagram.png" alt="A diagram of how the header might change to serve user objectives on different page types.">
-          <div class="myModal modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="/images/chronicle/system-diagram.png">
-            <div class="modal-caption">The diagram of how the new header and its' states work to better serve user objectives depending on page type.</div>
-          </div>
-          <p class="caption-below">The diagram of how the new header and its states work to better serve user objectives depending on page type.</p>
+          <case-image src="/images/chronicle/system-diagram.png" alt="A diagram of how the header might change to serve user objectives on different page types.">The diagram of how the new header and its states work to better serve user objectives depending on page type.</case-image>
             <br>
           <h3><strong>Customization for Page Context</strong></h3>
           <p class="case-body">The slim header adapts based on page type:</p>
           <ul class="case-body">
             <li><strong>Article pages:</strong> Feature sharing tools and related content navigation</li>
-            <li><strong>Account and workflow pages:</strong> Communicate's reader relationshipa and provides account options</li>
+            <li><strong>Account and workflow pages:</strong> Communicates reader relationship and provides account options</li>
             <li><strong>Homepage and default:</strong> Content promotion and account access</li>
           </ul>
 
           <p class="case-body">This flexibility means users always have relevant tools at hand without cluttering the interface with options they won't use in that context.</p>
 
-          <img class="myImg" src="/images/chronicle/high-fidelity-system-samples.png" alt="Screenshots of the header and pieces in different states, such as scrolled, unscrolled, and on different page types.">
-          <div class="myModal modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="/images/chronicle/high-fidelity-system-samples.png">
-            <div class="modal-caption">High-fidelity mockups of various header states, such as scrolled, unscrolled, and on different page types.</div>
-          </div>
-          <p class="caption-below">High-fidelity mockups of various header states, such as top/unscrolled, scrolled, and on different page types.</p>
+          <case-image src="/images/chronicle/high-fidelity-system-samples.png" alt="Screenshots of the header and pieces in different states, such as scrolled, unscrolled, and on different page types.">High-fidelity mockups of various header states, such as top/unscrolled, scrolled, and on different page types.</case-image>
             <br>
         </div>
       </div>
@@ -212,13 +197,7 @@
             <li>Minimal sticky header that appears on scroll-up only (disappears on scroll-down to maximize reading space)</li>
           </ul>
 
-          <img class="myImg" src="/images/chronicle/Mobile Header.png" alt="Screenshot of the MVP version of the new header on the homepage of Chronicle.com">
-          <div class="myModal modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="/images/chronicle/Mobile Header.png">
-            <div class="modal-caption">The mobile header, showing navigation closed then open</div>
-          </div>
-          <p class="caption-below">The mobile header, showing navigation closed then open</p>
+          <case-image src="/images/chronicle/Mobile Header.png" alt="Screenshot of the MVP version of the new header on the homepage of Chronicle.com">The mobile header, showing navigation closed then open</case-image>
 
           <p class="case-body">This approach respected the mobile reading experience while ensuring users could still access core functionality when needed. Testing showed that mobile users preferred this lightweight approach and were able to find navigation options when they needed them without feeling overwhelmed by options when they didn't.</p>
         </div>
@@ -229,13 +208,7 @@
         <div class="case-contents">
           <p class="case-body">The new header system launched as an MVP that established the flexible architecture for future iterations.</p>
 
-          <img class="myImg" src="/images/chronicle/chronicle.com-cover-img-1.png" alt="Screenshot of the MVP version of the new header on the homepage of Chronicle.com">
-          <div class="myModal modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" src="/images/chronicle/chronicle.com-cover-img-1.png">
-            <div class="modal-caption">The MVP of the new header, on the home page of Chronicle.com</div>
-          </div>
-          <p class="caption-below">The MVP of the new header, on the home page of Chronicle.com.</p>
+          <case-image src="/images/chronicle/chronicle.com-cover-img-1.png" alt="Screenshot of the MVP version of the new header on the homepage of Chronicle.com">The MVP of the new header, on the home page of Chronicle.com.</case-image>
 
           <p class="case-body"><strong>What we achieved:</strong></p>
           <ul class="case-body">
@@ -270,48 +243,9 @@
       <div class="case-section below-nav">
         <h2 class="section-title">More Work</h2>
         <div class="more-cards">
-
-          <div class="case-card horizontal-card"> 
-            <a href="/pages/chronicle-design-system.html">
-              <img src="/images/designsyscard.png" class="card-img-small">
-              <div class="case-description-wrapper">
-                <div class="home-case-title">
-                  <h2>Design System</h2>
-                  <div class="arrow">→</div>
-                </div>
-                <p class="case-desc">A year-long CMS redesign that eliminated technical debt and established a scalable design system</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="case-card horizontal-card">
-            <a href="/pages/lostcanyonimports.html">
-              <img src="/images/lostcanyon/LCI card still.png" class="card-img-small">
-              <div class="case-description-wrapper">
-                <div class="home-case-title">
-                  <h2>Lost Canyon Imports</h2>
-                  <div class="arrow">→</div>
-                </div>
-                <p class="case-desc">A sustainable ecommerce site focused on endangered traditional crafts and the communities that make them</p>
-              </div>
-            </a>
-          </div>
-
-          <div class="case-card horizontal-card"> 
-            <a href="https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9" target="_blank">
-              <img src="/images/nike lead.png" class="card-img-small">
-              <div class="case-description-wrapper">
-                <div class="home-case-title">
-                  <h2>Amazon v. Nike</h2>
-                  <div class="arrow">→</div>
-                </div>
-                <p class="case-desc">Keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)</p>
-              </div>
-            </a>
-          </div>
-          
+          <related-work exclude="chronicle-header"></related-work>
         </div>
-      </div>  
+      </div>
 
     </div>  
 

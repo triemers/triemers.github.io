@@ -15,6 +15,7 @@
     --fontSizeXS: 14px;
     --fontSizeXXS: .75rem; /* 12px captions */
     --borderRadius: 0px;
+    --contentMaxWidth: 800px; /* case study body copy, images, roles */
 }
 
 body {

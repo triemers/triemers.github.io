@@ -23,7 +23,7 @@ body {
     color: var(--primaryTextColor);
     display: flex;
     flex-direction: column;
-    height: 100vh; /*GPT CODE*/
+    min-height: 100vh;
 }
 
 /* typography */

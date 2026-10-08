@@ -28,6 +28,7 @@ li {
 .case-study-wrapper {
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin: 60px;
     counter-reset: section-counter;
 }

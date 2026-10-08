@@ -266,7 +266,6 @@ p.caption-below {
 
 /* Image Modal */
 .myImg {
-    border-radius: 0;
     cursor: pointer;
     transition: opacity 0.3s;
     max-height: 600px;

@@ -117,9 +117,6 @@ h3 {
     text-transform: uppercase;
 }
 
-.nav-menu > a {
-    text-transform: capitalize;
-}
  .nav-menu, .footer-nav {
             display: flex;
             gap: 40px;
@@ -129,6 +126,7 @@ h3 {
             text-decoration: none;
             color: var(--black);
             font-size: var(--fontSizeS);
+            text-transform: uppercase;
         }
 
 .nav-link:hover {

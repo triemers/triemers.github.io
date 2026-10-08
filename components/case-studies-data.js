@@ -3,6 +3,13 @@
 // the canonical images used on the home page's <case-card> entries.
 const caseStudies = [
   {
+    id: 'askchron',
+    title: 'AskChron',
+    href: '/pages/askchron.html',
+    thumb: '/images/chronicle/ask-chron.png',
+    desc: 'AI-powered research assistant trained on more than 130,000 Chronicle news articles and opinion pieces',
+  },
+  {
     id: 'chronicle-header',
     title: 'Header Redesign',
     href: '/pages/chronicle-header.html',
@@ -22,13 +29,5 @@ const caseStudies = [
     href: '/pages/chronicle-design-system.html',
     thumb: '/images/designsyscard.png',
     desc: 'A year-long CMS redesign that eliminated technical debt and established a scalable design system',
-  },
-  {
-    id: 'amazon-nike',
-    title: 'Amazon v. Nike',
-    href: 'https://uxdesign.cc/amazon-and-nike-com-through-the-lense-of-a-keyboard-584872b3fda9',
-    target: '_blank',
-    thumb: '/images/nike lead.png',
-    desc: 'Keyboard & screenreader accessibility study of nike.com and amazon.com (opens in new tab)',
   },
 ];

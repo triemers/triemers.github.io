@@ -23,9 +23,9 @@
         <div class="contents-section">
           <h2 class="section-title contents-title">Contents</h2>
           <div class="contents-items-wrapper">
-            <a href="#Challenge" class="contents-item">
+            <a href="#TheAsk" class="contents-item">
               <div class="contents-link">
-                <p>The Challenge</p>
+                <p>The Ask</p>
                 <div class="arrow">→</div>
               </div>
             </a>
@@ -35,33 +35,27 @@
                 <div class="arrow">→</div>
               </div>
             </a>
-            <a href="#Solution" class="contents-item">
+            <a href="#Behavioural" class="contents-item">
               <div class="contents-link">
-                <p>The Solution</p>
+                <p>Behavioural Decisions</p>
                 <div class="arrow">→</div>
               </div>
             </a>
-            <a href="#Design" class="contents-item">
+            <a href="#Interface" class="contents-item">
               <div class="contents-link">
-                <p>Design Process</p>
+                <p>Interface</p>
                 <div class="arrow">→</div>
               </div>
             </a>
-            <a href="#Testing" class="contents-item">
+            <a href="#Microinteractions" class="contents-item">
               <div class="contents-link">
-                <p>Testing & Iteration</p>
+                <p>Microinteractions</p>
                 <div class="arrow">→</div>
               </div>
             </a>
             <a href="#Impact" class="contents-item">
               <div class="contents-link">
-                <p>The Impact</p>
-                <div class="arrow">→</div>
-              </div>
-            </a>
-            <a href="#Learned" class="contents-item">
-              <div class="contents-link">
-                <p>What I Learned</p>
+                <p>Impact and Reception</p>
                 <div class="arrow">→</div>
               </div>
             </a>
@@ -73,7 +67,9 @@
             <h1 class="case-title">AskChron</h1>
             <h3 class="case-subhead">AI-powered research assistant trained on more than 130,000 <i>Chronicle</i> news articles and opinion pieces.</h3>
 
-            <img class="lead-img" src="/images/chronicle/ask-chron.png" alt="Screenshot of the AskChron AI research assistant interface">
+            <video class="lead-img" autoplay controls muted preload="metadata">
+               <source src="/images/chronicle/ask-chron-enrollment.mp4" type="video/mp4" alt="Screen recording of the AskChron enrollment and research assistant flow">
+            </video>
 
             <div class="case-roles">
               <p><strong>Role:</strong> <br>Lead Designer</p>
@@ -87,16 +83,16 @@
 
       </div>
 
-      <div class="case-section" id="Challenge">
-        <h2 class="section-title">The Challenge</h2>
+      <div class="case-section" id="TheAsk">
+        <h2 class="section-title">The Ask</h2>
         <div class="case-contents">
-          <p class="case-body">[TODO: Describe the problem AskChron was built to solve - what need wasn't being met, and why it mattered to readers or the business.]</p>
+          <p class="case-body">In late 2024, we partnered with AWS to build an AI research assistant to help our primary institutional users quickly answer their questions about the higher education landscape.</p>
 
-          <p class="case-body"><strong>Key problems:</strong></p>
+          <p class="case-body"><strong>Key considerations:</strong></p>
           <ul class="case-body">
-            <li>[TODO: Problem 1]</li>
-            <li>[TODO: Problem 2]</li>
-            <li>[TODO: Problem 3]</li>
+            <li>Working with a very particular set of users</li>
+            <li>Avoiding AI skepticism, especially as this was early in the days of LLMs becoming more commonplace</li>
+            <li>Creating an easy and seamless experience that could pull from all of <i>The Chronicle's</i> archives specifically (more on that decision later)</li>
           </ul>
         </div>
       </div>
@@ -104,59 +100,56 @@
       <div class="case-section" id="Research">
         <h2 class="section-title">Research & Discovery</h2>
         <div class="case-contents">
-          <h3>[TODO: Research method, e.g. Competitive Analysis / User Interviews]</h3>
-          <p class="case-body">[TODO: Describe how you investigated the problem - who you talked to, what you analyzed, what tools you used.]</p>
+          <h3>User Types</h3>
+          <p class="case-body">We already knew our user base well: mostly university administrators, deans, provosts, and presidents.</p>
 
           <p class="case-body"><strong>Key insights:</strong></p>
           <ul class="case-body">
-            <li>[TODO: Insight 1]</li>
-            <li>[TODO: Insight 2]</li>
-            <li>[TODO: Insight 3]</li>
+            <li>These users highly value reputable, well-sourced information, so minimizing hallucinations and surfacing sources were of the utmost importance</li>
+            <li>Tech literacy varies widely across this group, so simplicity would serve them better than a feature-dense tool</li>
+            <li>Their time is extremely valuable, so we kept the experience low-faff: only the most useful features, with minimal steps and interactions</li>
           </ul>
+
+          <h3>[TODO: Additional research subsection]</h3>
+          <p class="case-body">[TODO]</p>
         </div>
       </div>
 
-      <div class="case-section" id="Solution">
-        <h2 class="section-title">The Solution</h2>
+      <div class="case-section" id="Behavioural">
+        <h2 class="section-title">Behavioural Decisions</h2>
         <div class="case-contents">
-          <p class="case-body">[TODO: Describe the AskChron concept at a high level - what it does for the reader and how it fits into the Chronicle experience.]</p>
+          <h3>Tone</h3>
+          <p class="case-body">We decided on a professional yet friendly tone for AskChron's responses. Accuracy and neutrality were important here, but we didn't want to veer too academic - responses needed to be easy to read and keep mental load low. At the same time, we're dealing with a highly educated, professional user base, so going too casual or light wouldn't necessarily fit the situation.</p>
+
+          <h3>The Walled Garden</h3>
+          <p class="case-body">This was built while LLMs were starting to go mainstream, so we were highly conscious of hallucinations and incorrect information, especially content pulled from poor sources. Using only <i>Chronicle</i> content also meant we could provide direct, easy links to sources while keeping users on the <i>Chronicle</i> site, improving recirculation of our content. We started by training it on the <i>Chronicle's</i> online material, with the eventual goal of scanning and integrating the last 60 years of <i>Chronicle</i> archives.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Interface">
+        <h2 class="section-title">Interface</h2>
+        <div class="case-contents">
+          <p class="case-body">[TODO: Walk through the interface design - layout, visual language, how it fits into the <i>Chronicle</i> product.]</p>
 
           <!--<case-image src="/images/chronicle/REPLACE.png" alt="REPLACE alt text">REPLACE caption</case-image>-->
         </div>
       </div>
 
-      <div class="case-section" id="Design">
-        <h2 class="section-title">Design Process</h2>
+      <div class="case-section" id="Microinteractions">
+        <h2 class="section-title">Microinteractions</h2>
         <div class="case-contents">
-          <h3>[TODO: Subsection, e.g. Conversation Design / Interface Design]</h3>
-          <p class="case-body">[TODO: Walk through key design decisions - interaction patterns, trust & citation design, how answers are grounded in Chronicle's archive, etc.]</p>
-        </div>
-      </div>
-
-      <div class="case-section" id="Testing">
-        <h2 class="section-title">Testing & Iteration</h2>
-        <div class="case-contents">
-          <p class="case-body"><strong>Hypothesis:</strong> [TODO]</p>
-          <p class="case-body"><strong>What we tested:</strong> [TODO]</p>
-          <p class="case-body"><strong>Result:</strong> [TODO]</p>
+          <p class="case-body">[TODO: Describe key microinteractions - loading/thinking states, streaming responses, citation hovers, error states, etc.]</p>
         </div>
       </div>
 
       <div class="case-section" id="Impact">
-        <h2 class="section-title">The Impact</h2>
+        <h2 class="section-title">Impact and Reception</h2>
         <div class="case-contents">
           <ul class="case-body">
             <li>[TODO: Metric or outcome 1]</li>
             <li>[TODO: Metric or outcome 2]</li>
             <li>[TODO: Metric or outcome 3]</li>
           </ul>
-        </div>
-      </div>
-
-      <div class="case-section" id="Learned">
-        <h2 class="section-title">What I Learned</h2>
-        <div class="case-contents">
-          <p class="case-body">[TODO: Reflection on the project - a takeaway about designing AI-driven products, cross-functional collaboration, or a decision you'd make differently.]</p>
         </div>
       </div>
 

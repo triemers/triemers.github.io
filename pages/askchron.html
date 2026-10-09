@@ -110,8 +110,8 @@
             <li>Their time is extremely valuable, so we kept the experience low-faff: only the most useful features, with minimal steps and interactions</li>
           </ul>
 
-          <h3>[TODO: Additional research subsection]</h3>
-          <p class="case-body">[TODO]</p>
+          <h3>Early Interviews</h3>
+          <p class="case-body">Before building anything, we ran a handful of interviews with our target users to gauge interest and surface which features they'd actually want. One of the most frequent requests was the ability to copy or export answers - a feature we ended up building in (more on that in Microinteractions).</p>
         </div>
       </div>
 
@@ -149,17 +149,23 @@
           <p class="case-body">In the very first prototype, the answer would load in all at once, once it finished computing. This felt jarring and unnatural, especially for long, detailed answers. This technique - loading text in small pieces as it generates, known as streaming - is something I looked at across a few existing LLM chatbots at the time: ChatGPT, Amazon's Rufus, Perplexity, and Google's Gemini, among others. All of them streamed responses in chunks.</p>
 
           <p class="case-body">We then internally tested loading one line at a time, one word at a time, and three to seven characters at a time, as well as the pace at which each appeared. We landed on chunks of about five letters at a slightly quicker pace - fast enough to keep long answers from dragging, but slow enough that readers who wanted to scan the answer as it populated could still do so.</p>
+
+          <h3>Copy & Export</h3>
+          <p class="case-body">Early interviews surfaced a frequent request: the ability to copy or export an answer. We added a simple copy button to each response so users could quickly pull it into an email, document, or wherever else they needed it.</p>
+
+          <h3>Feedback Loop</h3>
+          <p class="case-body">Each response included a simple thumbs up/thumbs down rating. Clicking thumbs down revealed a quick feedback box prompting users to flag what went wrong - inaccurate answers, unexpected answers, and similar issues came up most often. During the beta, we also had visibility into anonymized questions and the responses AskChron gave, giving us a second lens on where the model needed work.</p>
         </div>
       </div>
 
       <div class="case-section" id="Impact">
         <h2 class="section-title">Impact and Reception</h2>
         <div class="case-contents">
-          <ul class="case-body">
-            <li>[TODO: Metric or outcome 1]</li>
-            <li>[TODO: Metric or outcome 2]</li>
-            <li>[TODO: Metric or outcome 3]</li>
-          </ul>
+          <p class="case-body"><span>AskChron shipped as a new feature meant to help drive subscriptions to <i>Chronicle's</i> top tier of access, and was generally well received by the target user base.</span></p>
+
+          <p class="case-body">The thumbs up/thumbs down feedback loop became one of our main tools for improving the model post-launch. Combined with visibility into anonymized questions and answers during the beta, it gave us a clear read on where AskChron was falling short.</p>
+
+          <p class="case-body">Over time, we used that feedback to retrain and refine the LLM, steadily eliminating edge cases, outdated answers, and other recurring problems. As our confidence in AskChron's answers grew, later iterations eventually removed the thumbs up/thumbs down buttons altogether.</p>
         </div>
       </div>
 

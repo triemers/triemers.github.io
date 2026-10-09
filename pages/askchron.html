@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskChron | triemers-ux</title>
+    <link rel="stylesheet" href="/styles/casestudies.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="/components/site-header.js"></script>
+    <script src="/components/site-footer.js"></script>
+    <script src="/components/case-studies-data.js"></script>
+    <script src="/components/related-work.js"></script>
+    <script src="/components/case-image.js"></script>
+  </head>
+  <body>
+    <site-header></site-header>
+
+    <div class="case-study-wrapper">
+
+      <div class="lead-block">
+
+        <div class="contents-section">
+          <h2 class="section-title contents-title">Contents</h2>
+          <div class="contents-items-wrapper">
+            <a href="#TheAsk" class="contents-item">
+              <div class="contents-link">
+                <p>The Ask</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+            <a href="#Research" class="contents-item">
+              <div class="contents-link">
+                <p>Research & Discovery</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+            <a href="#Behavioural" class="contents-item">
+              <div class="contents-link">
+                <p>Behavioural Decisions</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+            <a href="#Interface" class="contents-item">
+              <div class="contents-link">
+                <p>Interface</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+            <a href="#Microinteractions" class="contents-item">
+              <div class="contents-link">
+                <p>Microinteractions</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+            <a href="#Impact" class="contents-item">
+              <div class="contents-link">
+                <p>Impact and Reception</p>
+                <div class="arrow">→</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="case-contents">
+          <div class="lead-content">
+            <h1 class="case-title">AskChron</h1>
+            <h3 class="case-subhead">AI-powered research assistant trained on more than 130,000 <i>Chronicle</i> news articles and opinion pieces.</h3>
+
+            <video class="lead-img" autoplay controls muted preload="metadata">
+               <source src="/images/chronicle/ask-chron-enrollment.mp4" type="video/mp4" alt="Screen recording of the AskChron enrollment and research assistant flow">
+            </video>
+
+            <div class="case-roles">
+              <p><strong>Role:</strong> <br>Lead Designer</p>
+              <p><strong>Timeline:</strong><br> November 2024 – June 2025</p>
+              <p><strong>Team:</strong> <br>4-person team</p>
+              <p><strong>Tools:</strong> <br>Figma, JavaScript</p>
+            </div>
+            <br>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="case-section" id="TheAsk">
+        <h2 class="section-title">The Ask</h2>
+        <div class="case-contents">
+          <p class="case-body">In late 2024, we partnered with AWS to build an AI research assistant to help our primary institutional users quickly answer their questions about the higher education landscape.</p>
+
+          <p class="case-body"><strong>Key considerations:</strong></p>
+          <ul class="case-body">
+            <li>Working with a very particular set of users</li>
+            <li>Avoiding AI skepticism, especially as this was early in the days of LLMs becoming more commonplace</li>
+            <li>Creating an easy and seamless experience that could pull from all of <i>The Chronicle's</i> archives specifically (more on that decision later)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-section" id="Research">
+        <h2 class="section-title">Research & Discovery</h2>
+        <div class="case-contents">
+          <h3>User Types</h3>
+          <p class="case-body">We already knew our user base well: mostly university administrators, deans, provosts, and presidents.</p>
+
+          <p class="case-body"><strong>Key insights:</strong></p>
+          <ul class="case-body">
+            <li>These users highly value reputable, well-sourced information, so minimizing hallucinations and surfacing sources were of the utmost importance</li>
+            <li>Tech literacy varies widely across this group, so simplicity would serve them better than a feature-dense tool</li>
+            <li>Their time is extremely valuable, so we kept the experience low-faff: only the most useful features, with minimal steps and interactions</li>
+          </ul>
+
+          <h3>Early Interviews</h3>
+          <p class="case-body">Before building anything, we ran a handful of interviews with our target users to gauge interest and surface which features they'd actually want. One of the most frequent requests was the ability to copy or export answers - a feature we ended up building in (more on that in Microinteractions).</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Behavioural">
+        <h2 class="section-title">Behavioural Decisions</h2>
+        <div class="case-contents">
+          <h3>Tone</h3>
+          <p class="case-body">We decided on a professional yet friendly tone for AskChron's responses. Accuracy and neutrality were important here, but we didn't want to veer too academic - responses needed to be easy to read and keep mental load low. At the same time, we're dealing with a highly educated, professional user base, so going too casual or light wouldn't necessarily fit the situation.</p>
+
+          <h3>The Walled Garden</h3>
+          <p class="case-body"><span>This was built while LLMs were starting to go mainstream, so we were highly conscious of hallucinations and incorrect information, especially content pulled from poor sources. Using only <i>Chronicle</i> content also meant we could provide direct, easy links to sources while keeping users on the <i>Chronicle</i> site, improving recirculation of our content. We started by training it on the <i>Chronicle's</i> online material, with the eventual goal of scanning and integrating the last 60 years of <i>Chronicle</i> archives.</span></p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Interface">
+        <h2 class="section-title">Interface</h2>
+        <div class="case-contents">
+          <h3>Designing Within Constraints</h3>
+          <p class="case-body"><span>We wanted an approachable, simple interface, so I designed it in Figma, testing different message lengths and how the chat would sit within the overall page and window. The chat itself had to work both as its own standalone page (shown below) and embedded within the content well of other pages. We also needed to leave room for sponsored posts and ads in the surrounding asides, so I capped the chat's width at 720px to work in both contexts. Height was capped as well, so long message threads wouldn't create an endless scroll: the module dynamically expands up to a point, then forces an internal scroll so there's no wasted space in the body of the page.</span></p>
+
+          <!--<case-image src="/images/chronicle/REPLACE.png" alt="Screenshot of the AskChron standalone page">Caption for the standalone page screenshot</case-image>-->
+
+          <h3>A Clear First Impression</h3>
+          <p class="case-body">When users first landed on AskChron, we needed to immediately and succinctly communicate what it was. I settled on simple, one-line copy paired with the input box, with a link to the FAQ easily accessible for anyone who wanted to dig deeper. Overall, I leaned on a standard text/messaging app layout for cleanliness and familiarity.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Microinteractions">
+        <h2 class="section-title">Microinteractions</h2>
+        <div class="case-contents">
+          <h3>Loading</h3>
+          <p class="case-body">Early versions of the tool took quite a while to return responses. Once again, I took cues from the text and live-chat world and used loading dots while AskChron was "thinking." These dots persist at the bottom of the response as the text populates, signaling that the answer is still loading.</p>
+
+          <h3>Streaming the Response</h3>
+          <p class="case-body">In the very first prototype, the answer would load in all at once, once it finished computing. This felt jarring and unnatural, especially for long, detailed answers. This technique - loading text in small pieces as it generates, known as streaming - is something I looked at across a few existing LLM chatbots at the time: ChatGPT, Amazon's Rufus, Perplexity, and Google's Gemini, among others. All of them streamed responses in chunks.</p>
+
+          <p class="case-body">We then internally tested loading one line at a time, one word at a time, and three to seven characters at a time, as well as the pace at which each appeared. We landed on chunks of about five letters at a slightly quicker pace - fast enough to keep long answers from dragging, but slow enough that readers who wanted to scan the answer as it populated could still do so.</p>
+
+          <h3>Copy & Export</h3>
+          <p class="case-body">Early interviews surfaced a frequent request: the ability to copy or export an answer. We added a simple copy button to each response so users could quickly pull it into an email, document, or wherever else they needed it.</p>
+
+          <h3>Feedback Loop</h3>
+          <p class="case-body">Each response included a simple thumbs up/thumbs down rating. Clicking thumbs down revealed a quick feedback box prompting users to flag what went wrong - inaccurate answers, unexpected answers, and similar issues came up most often. During the beta, we also had visibility into anonymized questions and the responses AskChron gave, giving us a second lens on where the model needed work.</p>
+        </div>
+      </div>
+
+      <div class="case-section" id="Impact">
+        <h2 class="section-title">Impact and Reception</h2>
+        <div class="case-contents">
+          <p class="case-body"><span>AskChron shipped as a new feature meant to help drive subscriptions to <i>Chronicle's</i> top tier of access, and was generally well received by the target user base.</span></p>
+
+          <p class="case-body">The thumbs up/thumbs down feedback loop became one of our main tools for improving the model post-launch. Combined with visibility into anonymized questions and answers during the beta, it gave us a clear read on where AskChron was falling short.</p>
+
+          <p class="case-body">Over time, we used that feedback to retrain and refine the LLM, steadily eliminating edge cases, outdated answers, and other recurring problems. As our confidence in AskChron's answers grew, later iterations eventually removed the thumbs up/thumbs down buttons altogether.</p>
+        </div>
+      </div>
+
+      <!--Below section-->
+      <div class="case-section below-nav">
+        <h2 class="section-title">More Work</h2>
+        <div class="more-cards">
+          <related-work exclude="askchron"></related-work>
+        </div>
+      </div>
+
+    </div>
+
+    <site-footer></site-footer>
+
+    <script src="/scripts/scripts.js"></script>
+  </body>
+</html>
